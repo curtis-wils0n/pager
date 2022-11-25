@@ -122,3 +122,8 @@ VALUES
 ('Shadow of the Torturer', '1980', 'shadow-of-torturer.jpeg', 8, 8, 1)
 ('House of Suns', '2008', 'house-of-suns.jpeg', 9, 9, 1)
 ('Hyperion', '1989', 'hyperior-cover.jpeg', 10, 10, 1)
+
+## Questions 
+
+Would a book need their ratings in the table?
+Do we want books to be able to have several genres? (i.e Great Gatsby could be classified as a tradegy and fiction)
