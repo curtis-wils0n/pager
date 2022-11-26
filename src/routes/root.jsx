@@ -29,10 +29,19 @@ export default function Root() {
         <nav>
           <ul>
             <li>
-              <a href={`contacts/1`}>Your Name</a>
+              <a href={`user`}>My Profile</a>
             </li>
             <li>
-              <a href={`contacts/2`}>Your Friend</a>
+              <a href={`user/shelf`}>My Shelf</a>
+            </li>
+            <li>
+              <a href={`user/reviews`}>My Reviews</a>
+            </li>
+            <li>
+              <a href={`user/lists`}>My Lists</a>
+            </li>
+            <li>
+              <a href={`/`}>Logout</a>
             </li>
           </ul>
         </nav>

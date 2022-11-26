@@ -8,7 +8,10 @@ import {
 import "./styles/index.css";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
-import Contact from "./routes/contact";
+import User from "./routes/user";
+import Shelf from "./routes/user-shelf";
+import Reviews from "./routes/user-reviews";
+import Lists from "./routes/user-lists";
 
 const router = createBrowserRouter([
   {
@@ -17,8 +20,20 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "contacts/:contactId",
-    element: <Contact />,
+    path: "user",
+    element: <User />,
+  },
+  {
+    path: "user/shelf",
+    element: <Shelf />,
+  },
+  {
+    path: "user/reviews",
+    element: <Reviews />,
+  },
+  {
+    path: "user/lists",
+    element: <Lists />,
   },
 ]);
 
