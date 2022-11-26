@@ -1,52 +1,40 @@
 export default function Root() {
   return (
     <>
-      <div id="sidebar">
-        <h1>React Router Contacts</h1>
-        <div>
-          <form id="search-form" role="search">
-            <input
-              id="q"
-              aria-label="Search contacts"
-              placeholder="Search"
-              type="search"
-              name="q"
-            />
-            <div
-              id="search-spinner"
-              aria-hidden
-              hidden={true}
-            />
-            <div
-              className="sr-only"
-              aria-live="polite"
-            ></div>
-          </form>
-          <form method="post">
-            <button type="submit">New</button>
-          </form>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <a href={`user`}>My Profile</a>
-            </li>
-            <li>
-              <a href={`user/shelf`}>My Shelf</a>
-            </li>
-            <li>
-              <a href={`user/reviews`}>My Reviews</a>
-            </li>
-            <li>
-              <a href={`user/lists`}>My Lists</a>
-            </li>
-            <li>
-              <a href={`/`}>Logout</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div id="detail"></div>
+ <html>
+    <head>
+        <title>Navigation bar DEMO</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <header>
+           <h1>Pager</h1>
+            <nav>
+                <ul>
+                <li>
+                  <a href={`user`}>My Profile</a>
+                  </li>
+                 <li>
+                   <a href={`user/shelf`}>My Shelf</a>
+                   </li>
+                 <li>
+                  <a href={`user/reviews`}>My Reviews</a>
+                   </li>
+                 <li>
+                  <a href={`user/lists`}>My Lists</a>
+                  </li>
+                 <li>
+                  <a href={`/`}>Logout</a>
+                   </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <p>Books or something.</p>
+        </main>
+    </body>
+</html>
     </>
   );
 }
+
