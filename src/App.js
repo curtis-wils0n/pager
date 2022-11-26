@@ -17,8 +17,8 @@ function App() {
 
   const bookList = [];
   for (const book of Object.keys(books)) {
-    if (books[book].name !== null) {
-      bookList.push(books[book].name);
+    if (books[book].title !== null) {
+      bookList.push(books[book].title);
     }
   }
 
