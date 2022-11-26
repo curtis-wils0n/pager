@@ -4,10 +4,12 @@ import {
   createBrowserRouter,
   RouterProvider,
   Route,
+  Router
 } from "react-router-dom";
 import "./styles/index.css";
-import Root from "./routes/root";
+import Navbar, { loader as rootLoader } from "./routes/navbar";
 import ErrorPage from "./error-page";
+import Home from "./routes/home";
 import User from "./routes/user";
 import Shelf from "./routes/user-shelf";
 import Reviews from "./routes/user-reviews";
@@ -16,35 +18,14 @@ import Login from "./routes/login";
 import Register from "./routes/register";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "user",
-    element: <User />,
-  },
-  {
-    path: "user/shelf",
-    element: <Shelf />,
-  },
-  {
-    path: "user/reviews",
-    element: <Reviews />,
-  },
-  {
-    path: "user/lists",
-    element: <Lists />,
-  },
-  {
-    path: "login",
-    element: <Login />,
-  },
-  {
-    path: "register",
-    element: <Register />,
-  },
+<Router>
+  <Navbar />
+
+  <Route path='/'
+  <Home />
+  <Route>
+
+</Router>
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
