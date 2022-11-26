@@ -12,6 +12,8 @@ import User from "./routes/user";
 import Shelf from "./routes/user-shelf";
 import Reviews from "./routes/user-reviews";
 import Lists from "./routes/user-lists";
+import Login from "./routes/login";
+import Register from "./routes/register";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
   {
     path: "user/lists",
     element: <Lists />,
+  },
+  {
+    path: "login",
+    element: <Login />,
+  },
+  {
+    path: "register",
+    element: <Register />,
   },
 ]);
 
