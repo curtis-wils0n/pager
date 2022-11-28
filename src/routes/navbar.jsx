@@ -5,7 +5,8 @@ export default function Navbar() {
   return (
     <>
       <header>
-        <h1>Pager</h1>
+        <h1>Pager
+        </h1>
         <nav>
           <ul>
             <li>
