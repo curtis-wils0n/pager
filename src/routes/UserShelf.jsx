@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import UserShelfItem from "./UserShelfItem";
+import Form from "../components/Form"
 import axios from "axios";
 
 export default function Shelf() {
@@ -29,8 +30,12 @@ export default function Shelf() {
   )
 
   return (
-    <ul>
-      {renderedUserShelf}
-    </ul>
+    <>
+      <Form/>
+      <ul>
+        {renderedUserShelf}
+      </ul>
+    </>  
+      
   );
 }
