@@ -42,7 +42,7 @@ export default function Form(props) {
                 book_title: book_title.value,
                 author_name: author_name.value,
                 book_year: book_year.value,
-                cover_art_url: book_cover_url.value,
+                book_cover_art_url: book_cover_url.value,
                 genre: genre.value,
                 pub_name: pub_name.value,
                 pub_location: pub_location.value
