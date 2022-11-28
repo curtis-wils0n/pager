@@ -16,7 +16,11 @@ export default function Shelf() {
 
   return (
     <ul>
-      {Object.keys(books).map((book) => <li>{books[book].title} ({books[book].year}) by {books[book].author_name}, published by {books[book].publisher_name} ({books[book].location})</li>)}
+      {Object.keys(books).map((book) => 
+        <li>
+          {books[book].title} ({books[book].year}) by {books[book].author_name}, published by {books[book].publisher_name} ({books[book].location})
+        </li>
+      )}
     </ul>
   );
 }
