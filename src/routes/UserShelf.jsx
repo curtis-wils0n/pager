@@ -25,12 +25,13 @@ export default function Shelf() {
       year={indvBook.year}
     />
   }
-
   )
 
   return (
+    <div>
     <ul>
       {renderedUserShelf}
     </ul>
+    </div>
   );
 }
