@@ -1,5 +1,6 @@
 import React from "react";
 import { TextField, Input, Box, MenuItem, Button } from "@mui/material";
+import axios from "axios";
 
 export default function Form(props) {
 
@@ -25,6 +26,31 @@ export default function Form(props) {
           component="form"
           noValidate
           autoComplete="off"
+          onSubmit={(data) => {
+            const { 
+              book_title,
+              author_name,
+              book_year,
+              book_cover_url,
+              genre,
+              pub_name,
+              pub_location
+            } = data.target;
+            const bookURL = '/api/books';
+            Promise.all([
+              axios.put(bookURL, {
+                book_title: book_title.value,
+                author_name: author_name.value,
+                book_year: book_year.value,
+                cover_art_url: book_cover_url.value,
+                genre: genre.value,
+                pub_name: pub_name.value,
+                pub_location: pub_location.value
+              })
+            ]).then(() => {
+              console.log('complete');
+            });
+          }}
         >
           <Input name="book_title" type="text" placeholder="Book Title" />
           <Input name="author_name" type="text" placeholder="Author's Name" />
@@ -37,6 +63,7 @@ export default function Form(props) {
           <TextField
             select
             label="Select"
+            name="genre"
             value={genre}
             onChange={handleChange}
             helperText="Please select a genre"
