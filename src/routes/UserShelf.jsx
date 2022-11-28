@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
+import UserShelfItem from "./UserShelfItem";
 import axios from "axios";
-import Button from '@mui/material/Button';
-import SearchBar from '../components/SearchBar';
 
 export default function Shelf() {
-
+  
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
@@ -13,16 +12,25 @@ export default function Shelf() {
       axios.get(bookURL)
     ]).then((all) => {
       setBooks(all[0].data);
-    })
+    });
   }, []);
 
+  const renderedUserShelf = Object.keys(books).map((book) => {
+    const indvBook = books[book];
+    return <UserShelfItem
+      key={indvBook.id}
+      title={indvBook.title}
+      book_cover_art_url={indvBook.cover_art_url}
+      author={indvBook.author_name}
+      year={indvBook.year}
+    />
+  }
+
+  )
+
   return (
-    <div>
     <ul>
-      {Object.keys(books).map((book) => <li>{books[book].title} ({books[book].year}) by {books[book].author_name}, published by {books[book].publisher_name} ({books[book].location})</li>)}
+      {renderedUserShelf}
     </ul>
-            <Button variant="contained">Add book</Button>
-      <SearchBar />
-    </div>
   );
 }
