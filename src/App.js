@@ -8,7 +8,7 @@ import Home from './routes/home';
 import Login from './routes/login';
 import Register from './routes/register';
 import User from './routes/user';
-import Shelf from './routes/user-shelf';
+import Shelf from './routes/UserShelf';
 import Lists from './routes/user-lists';
 import Reviews from './routes/user-reviews';
 
