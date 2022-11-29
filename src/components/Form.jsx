@@ -52,13 +52,41 @@ export default function Form(props) {
             });
           }}
         >
-          <Input name="book_title" type="text" placeholder="Book Title" />
-          <Input name="author_name" type="text" placeholder="Author's Name" />
-          <Input name="book_year" type="number" placeholder="Year" />
+          <Input
+            name="book_title" 
+            type="text" 
+            placeholder="Book Title" 
+            sx={{ 
+              display: 'block',
+              width: 1/2
+            }}
+          />
+          <Input
+            name="author_name"
+            type="text"
+            placeholder="Author's Name"
+            sx={{ 
+              display: 'block',
+              width: 1/2
+            }}
+          />
+          <Input
+            name="book_year"
+            type="number"
+            placeholder="Year"
+            sx={{ 
+              display: 'block',
+              width: 1/2
+            }}
+          />
           <Input 
             name="book_cover_url" 
             type="text" 
             placeholder="Book Cover URL"
+            sx={{ 
+              display: 'block',
+              width: 1/2 
+            }}
           />
           <TextField
             select
@@ -66,7 +94,7 @@ export default function Form(props) {
             name="genre"
             value={genre}
             onChange={handleChange}
-            helperText="Please select a genre"
+            sx={{ width: 1/2 }}
             SelectProps={{
               native: false,
             }}
@@ -77,8 +105,24 @@ export default function Form(props) {
               </MenuItem>
             ))}
           </TextField>
-          <Input name="pub_name" type="text" placeholder="Publisher's Name" />
-          <Input name="pub_location" type="text" placeholder="Publisher's Location"/>
+          <Input 
+            name="pub_name"
+            type="text"
+            placeholder="Publisher's Name"
+            sx={{ 
+              display: 'block',
+              width: 1/2
+            }}
+          />
+          <Input
+            name="pub_location"
+            type="text"
+            placeholder="Publisher's Location"
+            sx={{ 
+              display: 'block' ,
+              width: 1/2
+            }}
+          />
           <Button variant="outlined" type="submit">Submit</Button>
         </Box>
       </section>
