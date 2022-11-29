@@ -6,11 +6,20 @@ export default function SearchBar(props) {
 
   return (
     <Autocomplete
-      disablePortal
-      id="combo-box-demo"
-      options={props.bookData}
-      sx={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Search Book" />}
+      freeSolo
+      id="free-solo-2-demo"
+      disableClearable
+      options={props.bookData.map((option) => option.title)}
+      renderInput={(params) => (
+        <TextField
+          {...params}
+          label="Search input"
+          InputProps={{
+            ...params.InputProps,
+            type: 'search',
+          }}
+        />
+      )}
     />
-  );
+);
 }
