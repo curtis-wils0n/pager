@@ -1,11 +1,13 @@
-header h1 {
+h1 {
   height: 40px;
   margin-left: 40px;
+  display: flex;
+  justify-content:flex-start;
 }
 
 body {
   height: 125vh;
-  background-color:rgb(255, 255, 255);
+  background-color:rgb(255, 167, 249);
   font-family: sans-serif;
   margin-top: 80px;
   padding: 30px;
@@ -20,13 +22,7 @@ header {
   border-bottom-style: solid;
   border-bottom-width: 3px;
   border-bottom-color: black;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   height: 80px;
-  display: flex;
-  align-items: center;
 }
 
 header * {
@@ -42,16 +38,9 @@ header li a {
   text-decoration: none;
 }
 
-/* This is for the star rating */
-button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
+.css-5nwj3y {
+  margin-left: 900px;
+  margin-right:40px;
 }
-.on {
-  color: #000;
-}
-.off {
-  color: #ccc;
-}
+
+
