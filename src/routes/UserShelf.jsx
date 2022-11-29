@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import UserShelfItem from "./UserShelfItem";
 import Form from "../components/Form"
 import axios from "axios";
+import SearchBar from "../components/SearchBar"
 
 export default function Shelf() {
-  
-  const [books, setBooks] = useState([]);
 
+  const [books, setBooks] = useState([]);
+  
   useEffect(() => {
     const bookURL = '/api/books';
     Promise.all([
@@ -15,6 +16,7 @@ export default function Shelf() {
       setBooks(all[0].data);
     });
   }, []);
+
 
   const renderedUserShelf = books.map(book =>
     <UserShelfItem
@@ -25,6 +27,7 @@ export default function Shelf() {
       year={book.year}
     />
   );
+
 
   return (
     <>
