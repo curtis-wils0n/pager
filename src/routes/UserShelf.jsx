@@ -7,8 +7,6 @@ import SearchBar from "../components/SearchBar"
 export default function UserShelf() {
   
   const [books, setBooks] = useState([]);
-
-  const [books, setBooks] = useState([]);
   
   useEffect(() => {
     const bookURL = '/api/books';
