@@ -2,8 +2,14 @@ import React, { useState, useEffect } from "react";
 import UserShelfItem from "./UserShelfItem";
 import Form from "../components/Form"
 import axios from "axios";
+import SearchBar from '../components/SearchBar'
 
 export default function Shelf() {
+
+  function transformBookData(data) {
+    console.log(Object.values(data))
+    return Object.values(data)
+  }
   
   const [books, setBooks] = useState([]);
 
@@ -30,6 +36,7 @@ export default function Shelf() {
 
   return (
     <>
+    <SearchBar bookData={() => transformBookData(books)} />
       <Form/>
       <ul>
         {renderedUserShelf}
