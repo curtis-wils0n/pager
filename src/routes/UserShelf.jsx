@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import UserShelfItem from "./UserShelfItem";
 import Form from "../components/Form"
 import axios from "axios";
-import SearchBar from "../components/SearchBar"
 
 export default function UserShelf() {
   
