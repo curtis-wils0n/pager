@@ -26,7 +26,6 @@ export default function Shelf() {
       year={indvBook.year}
     />
   }
-
   )
 
   return (
@@ -36,6 +35,5 @@ export default function Shelf() {
         {renderedUserShelf}
       </ul>
     </>  
-      
   );
 }

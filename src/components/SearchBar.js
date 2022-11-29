@@ -1,34 +1,22 @@
-import Box from '@mui/material/Box';
+import {React, useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
-import BookListTest from './BookListTest.js';
-import React, { useState } from "react";
+import Autocomplete from '@mui/material/Autocomplete';
 
+export default function SearchBar(props) {
 
-const SearchBar = () => {
+  // function transformBookData(obj) {
+  //    return Object.keys(obj);
+  // }
 
-  const [inputText, setInputText] = useState("");
+  const testString = "this is a test";
 
-  let inputHandler = (e) => {
-    //convert input text to lower case
-    var lowerCase = e.target.value.toLowerCase();
-    setInputText(lowerCase);
-  };
-
-return (
- <div className="main">
-      <h1>Book Search</h1>
-      <div className="search">
-        <TextField
-          id="outlined-basic"
-          onChange={inputHandler}
-          variant="outlined"
-          fullWidth
-          label="Search"
-        />
- </div>
- <BookListTest input={inputText} />
-</div>
-)
-};
-
-export default SearchBar;
+  return (
+    <Autocomplete
+      disablePortal
+      id="combo-box-demo"
+      option={testString}
+      sx={{ width: 300 }}
+      renderInput={(params) => <TextField {...params} label="Search Book" />}
+    />
+  );
+}
