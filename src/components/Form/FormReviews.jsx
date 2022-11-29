@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-import { Box, Input, Rating } from "@mui/material";
+import { Box, Input, Rating, Button } from "@mui/material";
 import axios from "axios";
 
 export default function FormReviews(props) {
 
-  const [rating, setRating] = useState();
+  const [stars, setStars] = useState();
 
   return (
     <Box
@@ -21,11 +21,11 @@ export default function FormReviews(props) {
         const reviewURL = '/api/reviews';
         Promise.all([
           axios.put(reviewURL, {
-            stars,
+            stars: stars.value,
             recommended: true,
-            description,
-            user_id,
-            book_id
+            description: description.value,
+            user_id: user_id.value,
+            book_id: book_id.value
           })
         ]).then(() => {
           console.log('complete');
@@ -35,7 +35,7 @@ export default function FormReviews(props) {
       <Rating
         name="stars"
         onChange={(event, newValue) => {
-          setRating(newValue);
+          setStars(newValue);
         }}
       />
       <Input
@@ -65,6 +65,7 @@ export default function FormReviews(props) {
           width: 1/2
         }}
       />
+      <Button variant="outlined" type="submit">Submit</Button>
     </Box>
   ) 
 }
