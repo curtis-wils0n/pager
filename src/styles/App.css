@@ -48,16 +48,7 @@ header li a {
   text-decoration: none;
 }
 
-/* This is for the star rating */
-button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-.on {
-  color: #000;
-}
-.off {
-  color: #ccc;
+/* recommended button width change */
+.MuiSvgIcon-root {
+  min-width: 40px;
 }
