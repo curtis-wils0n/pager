@@ -8,9 +8,9 @@ import Home from './routes/home';
 import Login from './routes/login';
 import Register from './routes/register';
 import User from './routes/user';
-import Shelf from './routes/UserShelf';
+import UserShelf from './routes/UserShelf';
 import Lists from './routes/user-lists';
-import Reviews from './routes/user-reviews';
+import UserReviews from './routes/UserReviews';
 
 function App() {
   return (
@@ -21,9 +21,9 @@ function App() {
         <Route path='/login' element={ <Login /> }></Route>
         <Route path='/register' element={ <Register /> }></Route>
         <Route path='/user' element={ <User /> }></Route>
-        <Route path='/user/shelf' element={ <Shelf /> }></Route>
+        <Route path='/user/shelf' element={ <UserShelf /> }></Route>
         <Route path='/user/lists' element={ <Lists /> }></Route>
-        <Route path='/user/reviews' element={ <Reviews /> }></Route>
+        <Route path='/user/reviews' element={ <UserReviews /> }></Route>
       </Routes>
     </Router>
   );

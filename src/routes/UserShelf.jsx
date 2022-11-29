@@ -3,7 +3,7 @@ import UserShelfItem from "./UserShelfItem";
 import Form from "../components/Form"
 import axios from "axios";
 
-export default function Shelf() {
+export default function UserShelf() {
   
   const [books, setBooks] = useState([]);
 
