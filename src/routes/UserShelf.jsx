@@ -16,17 +16,15 @@ export default function Shelf() {
     });
   }, []);
 
-  const renderedUserShelf = Object.keys(books).map((book) => {
-    const indvBook = books[book];
-    return <UserShelfItem
-      key={indvBook.id}
-      title={indvBook.title}
-      book_cover_art_url={indvBook.cover_art_url}
-      author={indvBook.author_name}
-      year={indvBook.year}
+  const renderedUserShelf = books.map(book =>
+    <UserShelfItem
+      key={book.id}
+      title={book.title}
+      book_cover_art_url={book.cover_art_url}
+      author={book.author_name}
+      year={book.year}
     />
-  }
-  )
+  );
 
   return (
     <>
