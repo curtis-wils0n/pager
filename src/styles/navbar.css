@@ -23,10 +23,14 @@ header {
   border-bottom-width: 3px;
   border-bottom-color: black;
   height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 header * {
-  display: inline;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 header li {
@@ -38,9 +42,12 @@ header li a {
   text-decoration: none;
 }
 
-.css-5nwj3y {
-  margin-left: 900px;
-  margin-right:40px;
+.title a {
+  text-decoration: none;
+  color: black;
 }
 
+.topnav {
+  margin: 30px;
+}
 
