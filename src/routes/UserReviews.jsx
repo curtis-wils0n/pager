@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import UserReviewsItem from "./UserReviewsItem";
+import FormTemplate from "../components/Form/FormTemplate";
 import axios from "axios";
 
 
@@ -36,6 +37,9 @@ export default function UserReviews() {
 
   return (
     <div>
+      <FormTemplate
+        type="reviews"
+      />
       {renderedReviews}
     </div>
   );

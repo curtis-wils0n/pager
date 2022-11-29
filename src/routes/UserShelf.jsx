@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import UserShelfItem from "./UserShelfItem";
-import Form from "../components/Form"
+import FormTemplate from "../components/Form/FormTemplate"
 import axios from "axios";
 
 export default function UserShelf() {
@@ -30,7 +30,9 @@ export default function UserShelf() {
 
   return (
     <>
-      <Form/>
+      <FormTemplate
+        type="books"
+      />
       <ul>
         {renderedUserShelf}
       </ul>
