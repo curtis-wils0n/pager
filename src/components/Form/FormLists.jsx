@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Input, Button } from "@mui/material";
 import axios from "axios";
 
-export default function FormReviews(props) {
+export default function FormLists(props) {
 
 
   return (
