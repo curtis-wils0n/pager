@@ -1,10 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 import { Box, Input, Rating, Button, Grid } from "@mui/material";
+import useAPIData from '../../hooks/useAPIData';
 import axios from "axios";
 
 export default function FormReviews(props) {
 
-  const [stars, setStars] = useState();
+const {
+  setStars
+} = useAPIData()
 
   return (
     <Box
