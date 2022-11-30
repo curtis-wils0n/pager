@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Box, Input, Rating, Button } from "@mui/material";
+import { Box, Input, Rating, Button, Grid } from "@mui/material";
 import axios from "axios";
 
 export default function FormReviews(props) {
@@ -11,6 +11,7 @@ export default function FormReviews(props) {
       component="form"
       noValidate
       autoComplete="off"
+      sx={{ flexGrow: 1 }}
       onSubmit={(data) => {
         const { 
           stars,
@@ -32,40 +33,47 @@ export default function FormReviews(props) {
         });
       }}
     >
-      <Rating
-        name="stars"
-        onChange={(event, newValue) => {
-          setStars(newValue);
-        }}
-      />
-      <Input
-        name="description"
-        type="text"
-        placeholder="Enter your review!"
-        sx={{
-          display: 'block',
-          width: 1/2
-        }}
-      />
-      <Input 
-        name="user_id"
-        type="number"
-        placeholder="user_id"
-        sx={{
-          display: 'block',
-          width: 1/2
-        }}
-      />
-      <Input 
-        name="book_id"
-        type="number"
-        placeholder="book_id"
-        sx={{
-          display: 'block',
-          width: 1/2
-        }}
-      />
-      <Button variant="outlined" type="submit">Submit</Button>
+      <Grid container spacing={1}>
+        <Grid item xs={12}>
+          <Rating
+            name="stars"
+            onChange={(event, newValue) => {
+              setStars(newValue);
+            }}
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <Input
+            name="description"
+            type="text"
+            placeholder="Enter your review!"
+            sx={{width: .452}}
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <Input 
+            name="user_id"
+            type="number"
+            placeholder="user_id"
+          />
+        </Grid>
+        <Grid item xs={9}>
+          <Input 
+            name="book_id"
+            type="number"
+            placeholder="book_id"
+          />
+        </Grid>
+        <Grid item xs={6}>
+          <Button
+            variant="outlined"
+            type="submit"
+            sx={{width: .91}}
+          >
+            Submit
+          </Button>
+        </Grid>
+      </Grid>
     </Box>
   ) 
 }

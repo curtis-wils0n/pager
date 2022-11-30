@@ -27,7 +27,7 @@ export default function Navbar() {
     <>
       <header class="header">
         <h1 class="title">
-          <a href='/'>Pager</a>
+          <a href='/'>OnlyBooks</a>
         </h1>
         <nav>
           <div class="topnav">

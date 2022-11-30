@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Input, TextField, Button, MenuItem } from "@mui/material";
+import { Box, Input, TextField, Button, MenuItem, Grid } from "@mui/material";
 import axios from "axios";
 import useBookData from '../../hooks/useBookData';
 
@@ -16,6 +16,7 @@ export default function FormContent(props) {
       component="form"
       noValidate
       autoComplete="off"
+      sx={{ flexGrow: 1 }}
       onSubmit={(data) => {
         const { 
           book_title,
@@ -42,78 +43,78 @@ export default function FormContent(props) {
         });
       }}
     >
-      <Input
-        name="book_title" 
-        type="text" 
-        placeholder="Book Title" 
-        sx={{ 
-          display: 'block',
-          width: 1/2
-        }}
-      />
-      <Input
-        name="author_name"
-        type="text"
-        placeholder="Author's Name"
-        sx={{ 
-          display: 'block',
-          width: 1/2
-        }}
-      />
-      <Input
-        name="book_year"
-        type="number"
-        placeholder="Year"
-        sx={{ 
-          display: 'block',
-          width: 1/2
-        }}
-      />
-      <Input 
-        name="book_cover_url" 
-        type="text" 
-        placeholder="Book Cover URL"
-        sx={{ 
-          display: 'block',
-          width: 1/2 
-        }}
-      />
-      <TextField
-        select
-        label="Select"
-        name="genre"
-        value={genre}
-        onChange={handleChange}
-        sx={{ width: 1/2 }}
-        SelectProps={{
-          native: false,
-        }}
-      >
-        {genres.map((option) => (
-          <MenuItem value={option}>
-          {option}
-          </MenuItem>
-        ))}
-      </TextField>
-      <Input 
-        name="pub_name"
-        type="text"
-        placeholder="Publisher's Name"
-        sx={{ 
-          display: 'block',
-          width: 1/2
-        }}
-      />
-      <Input
-        name="pub_location"
-        type="text"
-        placeholder="Publisher's Location"
-        sx={{ 
-          display: 'block' ,
-          width: 1/2
-        }}
-      />
-      <Button variant="outlined" type="submit">Submit</Button>
+      <Grid container spacing={1}>
+        <Grid item xs={3}>
+          <Input
+            name="book_title" 
+            type="text" 
+            placeholder="Book Title" 
+          />
+        </Grid>
+        <Grid item xs={9}>
+          <Input
+            name="author_name"
+            type="text"
+            placeholder="Author's Name"
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <Input
+            name="book_year"
+            type="number"
+            placeholder="Year"
+          />
+        </Grid>
+        <Grid item xs={9}>
+          <Input 
+            name="book_cover_url" 
+            type="text" 
+            placeholder="Book Cover URL"
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <TextField
+            select
+            label="Select Genre"
+            name="genre"
+            value={genre}
+            onChange={handleChange}
+            sx={{width: .45}}
+            SelectProps={{
+              native: false,
+            }}
+          >
+            {genres.map((option) => (
+              <MenuItem value={option}>
+              {option}
+              </MenuItem>
+            ))}
+          </TextField>
+        </Grid>
+        <Grid item xs={3}>
+          <Input 
+            name="pub_name"
+            type="text"
+            placeholder="Publisher's Name"
+          />
+        </Grid>
+        <Grid item xs={9}>
+          <Input
+            name="pub_location"
+            type="text"
+            placeholder="Publisher's Location"
+          />
+        </Grid>
+        <Grid item xs={6}>
+          <Button
+            variant="outlined"
+            type="submit"
+            sx={{width: .9}}
+          >
+              Submit
+          </Button>
+        </Grid>
+      </Grid>
     </Box>
   )
 }

@@ -2,7 +2,6 @@ import React from "react";
 
 export default function useBookData(initial) {
 
-
   const [genre, setGenre] = React.useState();
 
   const handleChange = (event) => {
@@ -18,6 +17,5 @@ export default function useBookData(initial) {
     'Non-Fiction'
   ]
 
-
- return { genre, handleChange, genres }
+  return { genre, handleChange, genres }
 }

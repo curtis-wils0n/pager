@@ -6,9 +6,7 @@ export default function FormTemplate(props) {
 
   return (
     <main>
-      <section>
-        {props.type === 'books' ? <FormBooks /> : <FormReviews />}
-      </section>
+      {props.type === 'books' ? <FormBooks /> : <FormReviews />}
     </main>
   )
 }
