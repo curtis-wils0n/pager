@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Input, Button } from "@mui/material";
+import { Box, Input, Button, Grid } from "@mui/material";
 import axios from "axios";
 
 export default function FormLists(props) {
@@ -10,6 +10,7 @@ export default function FormLists(props) {
       component="form"
       noValidate
       autoComplete="off"
+      sx={{ flexGrow: 1 }}
       onSubmit={(data) => {
         const { 
           title,
@@ -30,43 +31,45 @@ export default function FormLists(props) {
         });
       }}
     >
-      <Input
-        name="title"
-        type="text"
-        placeholder="Enter list title"
-        sx={{
-          display: 'block',
-          width: 1/2
-        }}
-      />
-      <Input 
-        name="description"
-        type="text"
-        placeholder="description"
-        sx={{
-          display: 'block',
-          width: 1/2
-        }}
-      />
-      <Input 
-        name="first_name"
-        type="text"
-        placeholder="first_name"
-        sx={{
-          display: 'block',
-          width: 1/2
-        }}
-      />
-        <Input 
-        name="last_name"
-        type="text"
-        placeholder="last_name"
-        sx={{
-          display: 'block',
-          width: 1/2
-        }}
-      />
-      <Button variant="outlined" type="submit">Submit</Button>
+      <Grid container spacing={1}>
+        <Grid item xs={3}>
+          <Input
+            name="title"
+            type="text"
+            placeholder="List Title"
+          />
+        </Grid>
+        <Grid item xs={9}>
+          <Input 
+            name="description"
+            type="text"
+            placeholder="Description"
+          />
+        </Grid>
+        <Grid item xs={3}>
+          <Input 
+            name="first_name"
+            type="text"
+            placeholder="First Name"
+          />
+        </Grid>
+        <Grid item xs={9}>
+          <Input 
+            name="last_name"
+            type="text"
+            placeholder="Last Name"
+          />
+        </Grid>
+        <Grid item xs={6}>
+          <Button
+            variant="outlined"
+            type="submit"
+            sx={{ width: .91 }}
+          >
+            Submit
+          </Button>
+        </Grid>
+      </Grid>
     </Box>
   ) 
 }
