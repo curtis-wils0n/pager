@@ -1,23 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Input, TextField, Button, MenuItem } from "@mui/material";
 import axios from "axios";
+import useBookData from '../../hooks/useBookData';
 
 export default function FormContent(props) {
 
-  const [genre, setGenre] = useState();
-
-  const handleChange = (event) => {
-    setGenre(event.target.value);
-  }
-  // TODO: Replace with dynamic call to DB
-  const genres = [
-    'Action',
-    'Science Fiction',
-    'Fantasy',
-    'Romance',
-    'Manga',
-    'Non-Fiction'
-  ]
+  const {
+    genre,
+    handleChange,
+    genres,
+  } = useBookData();
 
   return (
     <Box
