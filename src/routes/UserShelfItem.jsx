@@ -1,9 +1,10 @@
 import React from "react";
+import { Grid } from '@mui/material'
 
 export default function UserShelfItem(props) {
 
   return (
-    <li>
+    <Grid item xs={3}>
       <img 
         src={props.book_cover_art_url}
         alt={props.title}
@@ -11,6 +12,6 @@ export default function UserShelfItem(props) {
         height='300'
       />
       <p>{props.title} ({props.year}) by {props.author}</p>
-    </li>
+    </Grid>
   );
 }

@@ -1,10 +1,11 @@
 import React from "react";
 import StarRating from "../components/StarRating.js";
+import { Grid } from '@mui/material'
 
 export default function UserReviewsItem(props) {
 
   return (
-    <li>
+    <Grid item xs={3}>
       <img 
         src={props.cover_art_url}
         alt={props.title}
@@ -13,6 +14,6 @@ export default function UserReviewsItem(props) {
       />
       <p>{!props.recommended ? "Not" : ""} Recommended: {props.first_name} {props.last_name} gave <i>{props.title}</i> a <strong>{props.stars}/5</strong> and said: "{props.description}"</p>
       <StarRating />
-    </li>
+    </Grid>
   );
 }
