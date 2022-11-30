@@ -9,7 +9,7 @@ import Login from './routes/login';
 import Register from './routes/register';
 import User from './routes/user';
 import UserShelf from './routes/UserShelf';
-import Lists from './routes/user-lists';
+import Lists from './routes/userLists';
 import UserReviews from './routes/UserReviews';
 
 function App() {
