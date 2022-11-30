@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import UserListsItem from "./userListsItem";
+import UserListsItem from "./UserListsItem";
+import FormLists from '../components/Form/FormLists';
 
 export default function UserLists() {
 
@@ -27,6 +28,7 @@ export default function UserLists() {
 
   return (
     <div>
+      <FormLists />
     {renderedLists}
     </div>
   );
