@@ -1,11 +1,15 @@
-import React from "react";
-import { Box, Input, Rating, Button, Grid } from "@mui/material";
+import React, { useState } from "react";
+import { Box, Input, Rating, Button, Grid, Switch, Typography, Stack } from "@mui/material";
 import useAPIData from '../../hooks/useAPIData';
 import axios from "axios";
-import Recommended from '../Recommended';
-import NotRecommended from '../NotRecommended';
 
 export default function FormReviews(props) {
+
+  const [recommended, setRecommended] = useState(false);
+
+  const changeRecommended = () => {
+    setRecommended(!recommended);
+  }
 
   const {
     setStars
@@ -20,16 +24,16 @@ export default function FormReviews(props) {
       onSubmit={(data) => {
         const { 
           stars,
-          recommended,
           description,
           user_id,
           book_id
         } = data.target;
         const reviewURL = '/api/reviews';
+        console.log(recommended);
         Promise.all([
           axios.put(reviewURL, {
             stars: stars.value,
-            recommended: recommended.value,
+            recommended,
             description: description.value,
             user_id: user_id.value,
             book_id: book_id.value
@@ -43,17 +47,26 @@ export default function FormReviews(props) {
         <Grid item xs={12}>
           <Rating
             name="stars"
+
             onChange={(newValue) => {
               setStars(newValue);
             }}
           />
         </Grid>
-        <Grid item xs={3}>
-          <Recommended name="recommended"/>
+        <Grid item xs={2}>
+          <Stack direction="row" spacing={1} alignItems="center">
+            <Typography>Not Recommended</Typography>
+            <Switch 
+              name="recommended"
+              defaultValue={false}
+              onChange={() => {
+                changeRecommended();
+              }}
+            />
+            <Typography>Recommended</Typography>
+          </Stack>  
         </Grid>
-        <Grid item xs={9}>
-          <NotRecommended />
-        </Grid>
+
         <Grid item xs={12}>
           <Input
             name="description"
