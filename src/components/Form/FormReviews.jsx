@@ -40,7 +40,7 @@ const {
         <Grid item xs={12}>
           <Rating
             name="stars"
-            onChange={(event, newValue) => {
+            onChange={(newValue) => {
               setStars(newValue);
             }}
           />

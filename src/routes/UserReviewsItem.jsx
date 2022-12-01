@@ -12,8 +12,9 @@ export default function UserReviewsItem(props) {
         width='200'
         height='300'
       />
-      <p>{!props.recommended ? "Not" : ""} Recommended: {props.first_name} {props.last_name} gave <i>{props.title}</i> a <strong>{props.stars}/5</strong> and said: "{props.description}"</p>
-      <StarRating />
+      <p>{!props.recommended ? "Not" : ""} Recommended!</p>
+      <p>{props.first_name} {props.last_name} said: "{props.description}"</p>
+      <StarRating rating={props.stars} />
     </Grid>
   );
 }
