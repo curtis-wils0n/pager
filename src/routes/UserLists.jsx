@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormLists from '../components/Form/FormLists';
 import useAPIData from '../hooks/useAPIData';
+import { Button } from '@mui/material';
 
 export default function UserLists() {
 
@@ -18,7 +19,7 @@ export default function UserLists() {
   return (
     <>
       <form>
-        <button onClick={displayForm}>Add List</button>
+        <Button variant='outlined' onClick={displayForm}>Add List</Button>
       </form>
       {showForm && (
         <FormLists />

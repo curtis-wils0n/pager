@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import FormTemplate from "../components/Form/FormTemplate"
+import FormTemplate from "../components/Form/FormTemplate";
 import useAPIData from '../hooks/useAPIData';
-import { Grid } from '@mui/material'
+import { Grid, Button } from '@mui/material'
 
 export default function UserShelf() {
 
@@ -19,7 +19,7 @@ export default function UserShelf() {
   return (
     <>
       <form >
-        <button onClick={displayForm}>Add Book</button>
+        <Button variant="outlined" onClick={displayForm}>Add Book</Button>
       </form>
       {showForm && (
         <FormTemplate type="books" />
