@@ -2,12 +2,14 @@ import React from "react";
 import { Box, Input, Rating, Button, Grid } from "@mui/material";
 import useAPIData from '../../hooks/useAPIData';
 import axios from "axios";
+import Recommended from '../Recommended';
+import NotRecommended from '../NotRecommended';
 
 export default function FormReviews(props) {
 
-const {
-  setStars
-} = useAPIData()
+  const {
+    setStars
+  } = useAPIData()
 
   return (
     <Box
@@ -18,6 +20,7 @@ const {
       onSubmit={(data) => {
         const { 
           stars,
+          recommended,
           description,
           user_id,
           book_id
@@ -26,7 +29,7 @@ const {
         Promise.all([
           axios.put(reviewURL, {
             stars: stars.value,
-            recommended: true,
+            recommended: recommended.value,
             description: description.value,
             user_id: user_id.value,
             book_id: book_id.value
@@ -44,6 +47,12 @@ const {
               setStars(newValue);
             }}
           />
+        </Grid>
+        <Grid item xs={3}>
+          <Recommended name="recommended"/>
+        </Grid>
+        <Grid item xs={9}>
+          <NotRecommended />
         </Grid>
         <Grid item xs={12}>
           <Input

@@ -8,7 +8,7 @@ export default function NotRecommended() {
   return (
     <Stack direction="row" spacing={2}>
       <Button variant="contained" color="error">
-        <ThumbDownAltRoundedIcon /> This book trash!
+        <ThumbDownAltRoundedIcon /> Not Recommended
       </Button>
     </Stack>
   );
