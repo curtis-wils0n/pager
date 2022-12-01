@@ -47,7 +47,6 @@ export default function FormReviews(props) {
         <Grid item xs={12}>
           <Rating
             name="stars"
-
             onChange={(newValue) => {
               setStars(newValue);
             }}
