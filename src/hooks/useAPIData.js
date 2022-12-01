@@ -79,7 +79,7 @@ export default function useAPIData(initial) {
     />
   )
 
-  // Render user lists
+  // Render user list titles and description 
   const [lists, setLists] = useState([]);
   
   useEffect(() => {
