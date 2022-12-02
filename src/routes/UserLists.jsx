@@ -16,6 +16,9 @@ export default function UserLists() {
     renderedLists
   } = useAPIData()
 
+  const list1 = renderedLists.filter(list => list.key === '1')
+  const list2 = renderedLists.filter(list => list.key === '3')
+
   return (
     <>
       <form>
@@ -26,7 +29,11 @@ export default function UserLists() {
       )}
       <h1>Test McTest's Epic List of Epic Book's</h1>
       <Grid container spacing={2}>
-        {renderedLists}
+        {list1}
+      </Grid>
+      <h1>Test McTest's Worst List Ever</h1>
+      <Grid container spacing={2}>
+        {list2}
       </Grid>
     </>
   );
