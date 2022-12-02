@@ -38,13 +38,27 @@ export default function useAPIData(initial) {
     });
   }, []);
 
-  function handleSort() {
+
+  function sortName() {
+    const sortedData = [...books].sort((a, b) => {
+      return a.author_name > b.author_name ? 1 : -1;
+    })
+    setBooks(sortedData);
+  }
+
+  function sortTitle() {
     const sortedData = [...books].sort((a, b) => {
       return a.title > b.title ? 1 : -1;
     })
     setBooks(sortedData);
   }
 
+  function sortYear() {
+    const sortedData = [...books].sort((a, b) => {
+      return a.year > b.year ? 1 : -1;
+    })
+    setBooks(sortedData);
+  }
 
   const renderedUserShelf = books.map(book =>
     <UserShelfItem
@@ -107,7 +121,9 @@ export default function useAPIData(initial) {
   )
   
   return {
-    handleSort,
+    sortName,
+    sortTitle,
+    sortYear,
     genre,
     handleChange,
     genres,

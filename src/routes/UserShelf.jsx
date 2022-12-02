@@ -14,7 +14,9 @@ export default function UserShelf() {
 
   const {
     renderedUserShelf,
-    handleSort
+    sortName,
+    sortTitle,
+    sortYear
   } = useAPIData();
 
   return (
@@ -23,7 +25,13 @@ export default function UserShelf() {
         <Button variant="outlined" onClick={displayForm}>Add Book</Button>
       </form>
       <form>
-        <Button variant="outlined" onClick={handleSort}>Sort Books</Button>
+        <Button variant="outlined" onClick={sortName}>Sort By Author</Button>
+      </form>
+      <form>
+        <Button variant="outlined" onClick={sortTitle}>Sort By Title</Button>
+      </form>
+      <form>
+        <Button variant="outlined" onClick={sortYear}>Sort By Year</Button>
       </form>
       {showForm && (
         <FormTemplate type="books" />
