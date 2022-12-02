@@ -55,7 +55,7 @@ header li a {
   min-width: 40px;
 }
 
-.bg {
+.hero-bg {
   background-color: #ff90e8;
 
   height: 50vh;
@@ -67,6 +67,20 @@ header li a {
   align-items: center;
   justify-content: center;
   border: solid 3px black;
+}
+
+.hero-feature-bg {
+  background-color: #FFC900;
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: solid 3px black;
+  margin-top: 2em;
 }
 
 .welcome {
