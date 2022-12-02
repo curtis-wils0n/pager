@@ -1,6 +1,8 @@
 header h1 {
   height: 40px;
   margin-left: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 body {
@@ -51,4 +53,39 @@ header li a {
 /* recommended button width change */
 .MuiSvgIcon-root {
   min-width: 40px;
+}
+
+.bg {
+  background-color: #ff90e8;
+
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 3px black;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  color: black;
+  text-align: center;
+  font-family: 'Bungee Shade', cursive;
+  font-weight: 700;
+  font-size: 4em;
+  margin: 20px;
+}
+
+.subtext {
+  color: black;
+  text-align: center;
+  font-family: 'Monserrat', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  padding: 2px;
+  margin: 20px;
 }
