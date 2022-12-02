@@ -25,12 +25,12 @@ export default function Navbar() {
   
   return (
     <>
-      <header class="header">
-        <h1 class="title">
+      <header className="header">
+        <h1 className="title">
           <a href='/'>pager</a>
         </h1>
         <nav>
-          <div class="topnav">
+          <div className="topnav">
             <React.Fragment>
               <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                 <Typography sx={{ minWidth: 100 }}>Ryan Magee</Typography>

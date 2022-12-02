@@ -7,22 +7,6 @@ import axios from 'axios';
 
 export default function useAPIData(initial) {
 
-  // hook for book form creation 
-  const [genre, setGenre] = React.useState();
-
-  const handleChange = (event) => {
-    setGenre(event.target.value);
-  }
-  // Replace with dynamic call to DB
-  const genres = [
-    'Action',
-    'Science Fiction',
-    'Fantasy',
-    'Romance',
-    'Manga',
-    'Non-Fiction'
-  ]
-
   // star rating setting
   const [stars, setStars] = useState();
 
@@ -101,5 +85,11 @@ export default function useAPIData(initial) {
     />
   )
   
-  return { genre, handleChange, genres, setStars, stars, renderedUserShelf, renderedReviews, renderedLists }
+  return {
+    setStars,
+    stars,
+    renderedUserShelf,
+    renderedReviews,
+    renderedLists
+  }
 }

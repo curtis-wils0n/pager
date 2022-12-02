@@ -1,16 +1,8 @@
 import React from "react";
-import { Box, Input, TextField, Button, MenuItem, Grid } from "@mui/material";
+import { Box, Input, Button, Grid } from "@mui/material";
 import axios from "axios";
-import useAPIData from '../../hooks/useAPIData';
 
 export default function FormContent(props) {
-
-  const {
-    genre,
-    handleChange,
-    genres,
-  } = useAPIData();
-
   return (
     <Box
       component="form"
@@ -37,7 +29,7 @@ export default function FormContent(props) {
             genre: genre.value,
             pub_name: pub_name.value,
             pub_location: pub_location.value
-          })
+          }, [])
         ]).then(() => {
           console.log('complete');
         });
@@ -73,23 +65,11 @@ export default function FormContent(props) {
           />
         </Grid>
         <Grid item xs={12}>
-          <TextField
-            select
-            label="Select Genre"
+          <Input
             name="genre"
-            value={genre}
-            onChange={handleChange}
-            sx={{width: .45}}
-            SelectProps={{
-              native: false,
-            }}
-          >
-            {genres.map((option) => (
-              <MenuItem value={option}>
-              {option}
-              </MenuItem>
-            ))}
-          </TextField>
+            type="text"
+            placeholder="Genre"
+          />
         </Grid>
         <Grid item xs={3}>
           <Input 
