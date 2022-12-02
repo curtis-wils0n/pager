@@ -38,6 +38,13 @@ export default function useAPIData(initial) {
     });
   }, []);
 
+  function handleSort() {
+    const sortedData = [...books].sort((a, b) => {
+      return a.title > b.title ? 1 : -1;
+    })
+    setBooks(sortedData);
+  }
+
 
   const renderedUserShelf = books.map(book =>
     <UserShelfItem
@@ -99,5 +106,15 @@ export default function useAPIData(initial) {
     />
   )
   
-  return { genre, handleChange, genres, setStars, stars, renderedUserShelf, renderedReviews, renderedLists }
+  return {
+    handleSort,
+    genre,
+    handleChange,
+    genres,
+    setStars,
+    stars,
+    renderedUserShelf,
+    renderedReviews,
+    renderedLists 
+  }
 }
