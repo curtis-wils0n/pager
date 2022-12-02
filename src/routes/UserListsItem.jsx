@@ -1,11 +1,17 @@
 import React from "react";
-
+import { Grid } from '@mui/material'
 
 export default function UserListsItem(props) {
 
   return (
-    <li>
-      <p>{props.title} about: {props.description} created by: {props.first_name} {props.last_name}</p>
-    </li>
+    <Grid item xs={3}>
+    <img 
+      src={props.cover_art_url}
+      alt={props.title}
+      width='200'
+      height='300'
+    />
+    <p>{props.title}</p>
+  </Grid>
   );
 }
