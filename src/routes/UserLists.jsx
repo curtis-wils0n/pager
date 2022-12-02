@@ -16,6 +16,7 @@ export default function UserLists() {
     renderedLists
   } = useAPIData()
 
+  console.log(renderedLists);
   const list1 = renderedLists.filter(list => list.key === '1')
   const list2 = renderedLists.filter(list => list.key === '3')
 
@@ -27,11 +28,13 @@ export default function UserLists() {
       {showForm && (
         <FormLists />
       )}
-      <h1>Test McTest's Epic List of Epic Book's</h1>
+      <h1>Abby's favourite books of 2022</h1>
+      <p>These are some books that I really liked reading in 2022</p>
       <Grid container spacing={2}>
         {list1}
       </Grid>
-      <h1>Test McTest's Worst List Ever</h1>
+      <h1>Abby's revised favourite books list of 2022</h1>
+      <p>Here are a new bunch of books that I actually like better than the last list I made!</p>
       <Grid container spacing={2}>
         {list2}
       </Grid>
