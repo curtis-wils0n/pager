@@ -87,7 +87,7 @@ export default function Navbar() {
                 }}
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-                >
+              >
                 <MenuItem>
                   <Avatar /> <Link class="menulink" to='user'>My Profile</Link>
                 </MenuItem>

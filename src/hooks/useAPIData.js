@@ -38,7 +38,6 @@ export default function useAPIData(initial) {
     });
   }, []);
 
-
   function sortName() {
     const sortedData = [...books].sort((a, b) => {
       return a.author_name > b.author_name ? 1 : -1;
