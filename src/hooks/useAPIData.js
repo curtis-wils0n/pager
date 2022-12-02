@@ -79,7 +79,7 @@ export default function useAPIData(initial) {
     />
   )
 
-  // Render user lists
+  // Render user list titles and description 
   const [lists, setLists] = useState([]);
   
   useEffect(() => {
@@ -95,9 +95,7 @@ export default function useAPIData(initial) {
     <UserListsItem 
       key={list.id}
       title={list.title}
-      description={list.description}
-      first_name={list.first_name}
-      last_name={list.last_name}
+      cover_art_url={list.cover_art_url}
     />
   )
   

@@ -49,5 +49,22 @@ header li a {
 
 .topnav {
   margin: 30px;
+  color: white;
 }
 
+nav {
+  background-color: black;
+  height: 80px;
+}
+
+.bookicon {
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.menulink {
+  color: black;
+  text-decoration: none;
+
+}

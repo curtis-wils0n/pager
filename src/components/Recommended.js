@@ -21,10 +21,11 @@ export default function Recommended() {
   return (
     <Stack direction="row" spacing={2}>
       <Button 
-      variant="contained" 
-      color="success"
-      className={`like-button ${isClicked && 'liked'}`} onClick={ handleClick }>
-        <ThumbUpAltRoundedIcon /> A very good read!
+        variant="contained" 
+        color="success"
+        className={`like-button ${isClicked && 'liked'}`} onClick={ handleClick }
+      >
+        <ThumbUpAltRoundedIcon/>Recommended
       </Button>
     </Stack>
   );

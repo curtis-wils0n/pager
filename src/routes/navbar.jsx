@@ -8,6 +8,11 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';
+import RateReviewIcon from '@mui/icons-material/RateReview';
+import ListIcon from '@mui/icons-material/List';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import '../styles/navbar.css';
 
 
@@ -21,13 +26,15 @@ export default function Navbar() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
+  
   
   return (
     <>
       <header class="header">
         <h1 class="title">
           <a href='/'>pager</a>
+          <MenuBookIcon 
+          class="bookicon"/>
         </h1>
         <nav>
           <div class="topnav">
@@ -42,7 +49,7 @@ export default function Navbar() {
                     aria-controls={ open ? 'account-menu' : undefined }
                     aria-haspopup="true"
                     aria-expanded={ open ? 'true' : undefined }
-                  >
+                    >
                     <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
                   </IconButton>
                 </Tooltip>
@@ -80,23 +87,23 @@ export default function Navbar() {
                 }}
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-              >
+                >
                 <MenuItem>
-                  <Avatar /> <Link to='user'>My Profile</Link>
+                  <Avatar /> <Link class="menulink" to='user'>My Profile</Link>
                 </MenuItem>
                 <Divider />
                 <MenuItem>
-                  <Avatar /> <Link to='user/shelf'>My Shelf</Link>
+                  <BookmarkAddedIcon /> <Link class="menulink" to='user/shelf'>My Shelf</Link>
                 </MenuItem>
                 <MenuItem>
-                  <Avatar /> <Link to='user/reviews'>My Reviews</Link>
+                  <RateReviewIcon /> <Link class="menulink" to='user/reviews'>My Reviews</Link>
                 </MenuItem>
                 <MenuItem>
-                  <Avatar /> <Link to='user/lists'>My Lists</Link>
+                  <ListIcon /> <Link class="menulink" to='user/lists'>My Lists</Link>
                 </MenuItem>
                 <Divider />
                 <MenuItem>
-                  <Avatar /> <Link to='/'>Logout</Link>
+                  <ExitToAppIcon /> <Link class="menulink" to='/'>Logout</Link>
                 </MenuItem>
               </Menu>
             </React.Fragment>
