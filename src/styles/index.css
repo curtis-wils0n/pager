@@ -6,7 +6,7 @@ header h1 {
 body {
   height: 125vh;
   background-color:rgb(144, 123, 98);
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin-top: 80px;
   padding: 30px;
 }
