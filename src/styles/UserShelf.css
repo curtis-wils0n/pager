@@ -2,9 +2,10 @@ div .sort-buttons {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 40px;
-  margin-right: 60px;
+  margin-right: 170px;
   position: static;
 }
+
 
 button.MuiButton-root {
   color: white;
@@ -15,7 +16,7 @@ button.MuiButton-root {
 }
 
 button.MuiButton-root:hover {
-  background-color: pink;
+  background-color: rgb(255, 78, 243);
   color:black;
   border:pink;
 }
@@ -24,3 +25,11 @@ button.MuiButton-root:hover {
   margin-bottom: 40px;
 }
 
+.book-grid {
+  padding-left: 120px;
+}
+
+div .img {
+border-style: solid;
+border-width: thick;
+}
