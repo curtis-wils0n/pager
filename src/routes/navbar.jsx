@@ -40,7 +40,7 @@ export default function Navbar() {
           <div class="topnav">
             <React.Fragment>
               <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-                <Typography sx={{ minWidth: 100 }}>Ryan Magee</Typography>
+                <Typography sx={{ minWidth: 100 }}>ILuvBooks</Typography>
                 <Tooltip title="Account settings">
                   <IconButton
                     onClick={ handleClick }
@@ -103,7 +103,7 @@ export default function Navbar() {
                 </MenuItem>
                 <Divider />
                 <MenuItem>
-                  <ExitToAppIcon /> <Link class="menulink" to='/'>Logout</Link>
+                  <ExitToAppIcon /> <Link class="menulink" to='/login'>Logout</Link>
                 </MenuItem>
               </Menu>
             </React.Fragment>
