@@ -10,5 +10,16 @@ button.MuiButton-root {
   color: white;
   background-color:black;
   border: black;
+  position: static;
+  margin-left: 20px;
 }
 
+button.MuiButton-root:hover {
+  background-color: pink;
+  color:black;
+  border:pink;
+}
+
+.MuiGrid {
+  margin-left:80px;
+}
