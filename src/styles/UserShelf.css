@@ -20,6 +20,7 @@ button.MuiButton-root:hover {
   border:pink;
 }
 
-.MuiGrid {
-  margin-left:80px;
+.add-book-form {
+  margin-bottom: 40px;
 }
+
