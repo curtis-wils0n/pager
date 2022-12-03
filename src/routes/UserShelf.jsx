@@ -22,12 +22,12 @@ export default function UserShelf() {
 
   return (
     <>
-    <div class="add-book-button">
+    <div class="sort-buttons">
+    <div id="add-book-button">
       <form>
         <Button variant="outlined" onClick={displayForm}>Add Book</Button>
       </form>
       </div>
-    <div class="sort-buttons">
       <form>
         <Button variant="outlined" onClick={sortName}>Sort By Author</Button>
       </form>

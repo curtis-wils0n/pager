@@ -2,13 +2,34 @@ div .sort-buttons {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 40px;
-  margin-right: 60px;
+  margin-right: 170px;
   position: static;
 }
+
 
 button.MuiButton-root {
   color: white;
   background-color:black;
   border: black;
+  position: static;
+  margin-left: 20px;
 }
 
+button.MuiButton-root:hover {
+  background-color: rgb(255, 78, 243);
+  color:black;
+  border:pink;
+}
+
+.add-book-form {
+  margin-bottom: 40px;
+}
+
+.book-grid {
+  padding-left: 120px;
+}
+
+div .img {
+border-style: solid;
+border-width: thick;
+}
