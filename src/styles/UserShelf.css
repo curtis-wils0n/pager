@@ -1,0 +1,14 @@
+div .sort-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40px;
+  margin-right: 60px;
+  position: static;
+}
+
+button.MuiButton-root {
+  color: white;
+  background-color:black;
+  border: black;
+}
+

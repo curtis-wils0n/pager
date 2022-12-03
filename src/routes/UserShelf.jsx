@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormTemplate from "../components/Form/FormTemplate";
 import useAPIData from '../hooks/useAPIData';
 import { Grid, Button } from '@mui/material'
+import '../styles/UserShelf.css';
 
 export default function UserShelf() {
 
@@ -21,9 +22,12 @@ export default function UserShelf() {
 
   return (
     <>
+    <div class="add-book-button">
       <form>
         <Button variant="outlined" onClick={displayForm}>Add Book</Button>
       </form>
+      </div>
+    <div class="sort-buttons">
       <form>
         <Button variant="outlined" onClick={sortName}>Sort By Author</Button>
       </form>
@@ -33,12 +37,17 @@ export default function UserShelf() {
       <form>
         <Button variant="outlined" onClick={sortYear}>Sort By Year</Button>
       </form>
+      </div>
+      <div class="add-book-form">
       {showForm && (
         <FormTemplate type="books" />
       )}
+      </div>
+      <div class="book-grid">
       <Grid container spacing={2}>
         {renderedUserShelf}
       </Grid>
+      </div>
     </>
   );
 }
