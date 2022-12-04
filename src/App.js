@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './styles/App.css';
 
-import Navbar from './routes/navbar';
 import Home from './routes/home';
 import Login from './routes/login';
 import Register from './routes/register';
@@ -16,7 +15,6 @@ import UserReviews from './routes/UserReviews';
 function App() {
   return (
     <Router>
-      <Navbar />
       <Routes>
         <Route path='/' element={ <Home /> }></Route>
         <Route path='/login' element={ <Login /> }></Route>
