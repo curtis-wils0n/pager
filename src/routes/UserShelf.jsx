@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormTemplate from "../components/Form/FormTemplate";
 import useAPIData from '../hooks/useAPIData';
+import Navbar from '../routes/navbar';
 import { Grid, Button } from '@mui/material'
 
 export default function UserShelf() {
@@ -21,6 +22,7 @@ export default function UserShelf() {
 
   return (
     <>
+    <Navbar />
       <form>
         <Button variant="outlined" onClick={displayForm}>Add Book</Button>
       </form>
