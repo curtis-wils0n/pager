@@ -12,7 +12,9 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import PropTypes from 'prop-types';
+
+import { useCookies } from 'react-cookie';
+
 
 function Copyright(props) {
   return (
@@ -29,31 +31,13 @@ function Copyright(props) {
 
 const theme = createTheme();
 
-// grabs token from API
-async function loginUser(credentials) {
-  return fetch('http://localhost:8001/login', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(credentials)
-  })
-    .then(data => data.json())
- }
 
-export default function Login( { setToken }) {
+export default function Login() {
 
-  const [username, setUserName] = useState();
-  const [password, setPassword] = useState();
+  const [cookies, setCookie] = useCookies(['name']);
 
-  // sets token upon login in
-  const handleSubmit = async e => {
-    e.preventDefault();
-    const token = await loginUser({
-      username,
-      password
-    });
-    setToken(token);
+  function handleSubmit(newName) {
+    setCookie('name', newName, { path: '/' });
   }
 
   return (
@@ -100,7 +84,7 @@ export default function Login( { setToken }) {
                 name="email"
                 autoComplete="email"
                 autoFocus
-                onChange={e => setUserName(e.target.value)}
+                onChange={e => setCookie(e.target.value)}
               />
               <TextField
                 margin="normal"
@@ -111,7 +95,7 @@ export default function Login( { setToken }) {
                 type="password"
                 id="password"
                 autoComplete="current-password"
-                onChange={e => setPassword(e.target.value)}
+                onChange={e => setCookie(e.target.value)}
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
@@ -146,6 +130,3 @@ export default function Login( { setToken }) {
   );
 }
 
-Login.propTypes = {
-  setToken: PropTypes.func.isRequired
-}

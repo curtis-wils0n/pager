@@ -18,11 +18,12 @@ function App() {
   const { token, setToken } = useToken();
 
   if (!token) {
-    return <Login setToken={setToken} />
+    return <Login setToken={setToken} /> 
   } 
 
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path='/' element={ <Home /> }></Route>
         <Route path='/login' element={ <Login /> }></Route>
