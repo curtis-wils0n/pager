@@ -13,7 +13,6 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-import { useCookies } from 'react-cookie';
 
 
 function Copyright(props) {
@@ -34,11 +33,7 @@ const theme = createTheme();
 
 export default function Login() {
 
-  const [cookies, setCookie] = useCookies(['name']);
 
-  function handleSubmit(newName) {
-    setCookie('name', newName, { path: '/' });
-  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -74,7 +69,7 @@ export default function Login() {
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <Box component="form" noValidate onSubmit={} sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
                 required
@@ -84,7 +79,6 @@ export default function Login() {
                 name="email"
                 autoComplete="email"
                 autoFocus
-                onChange={e => setCookie(e.target.value)}
               />
               <TextField
                 margin="normal"
@@ -95,7 +89,6 @@ export default function Login() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
-                onChange={e => setCookie(e.target.value)}
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
