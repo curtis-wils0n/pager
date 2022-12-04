@@ -11,10 +11,12 @@ import User from './routes/user';
 import UserShelf from './routes/UserShelf';
 import Lists from './routes/UserLists';
 import UserReviews from './routes/UserReviews';
+import Navbar from './routes/navbar';
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path='/' element={ <Home /> }></Route>
         <Route path='/login' element={ <Login /> }></Route>

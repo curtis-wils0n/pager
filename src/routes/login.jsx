@@ -13,6 +13,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
+import HomeNavbar from './HomeNavbar';
 
 function Copyright(props) {
   return (
@@ -41,6 +42,7 @@ export default function Login() {
 
   return (
     <ThemeProvider theme={theme}>
+      <HomeNavbar />
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid

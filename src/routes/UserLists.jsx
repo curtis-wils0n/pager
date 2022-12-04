@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import FormLists from '../components/Form/FormLists';
 import useAPIData from '../hooks/useAPIData';
 import { Button, Grid } from '@mui/material';
-import Navbar from '../routes/navbar';
 
 export default function UserLists() {
 
@@ -23,7 +22,6 @@ export default function UserLists() {
 
   return (
     <>
-    <Navbar />
       <form>
         <Button variant='outlined' onClick={displayForm}>Add List</Button>
       </form>
