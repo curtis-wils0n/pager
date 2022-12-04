@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React  from 'react';
+import { Navigate, useNavigate } from 'react-router-dom';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -33,7 +34,11 @@ const theme = createTheme();
 
 export default function Login() {
 
+  const navigate = useNavigate();
 
+  const handleSubmit = (event) => {
+    navigate('/')
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -69,7 +74,7 @@ export default function Login() {
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-            <Box component="form" noValidate onSubmit={} sx={{ mt: 1 }}>
+            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
                 required

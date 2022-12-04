@@ -130,6 +130,6 @@ export default function useAPIData(initial) {
     stars,
     renderedUserShelf,
     renderedReviews,
-    renderedLists 
+    renderedLists,
   }
 }

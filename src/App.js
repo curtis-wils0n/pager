@@ -11,15 +11,8 @@ import User from './routes/user';
 import UserShelf from './routes/UserShelf';
 import Lists from './routes/UserLists';
 import UserReviews from './routes/UserReviews';
-import useToken from './hooks/useToken';
 
 function App() {
-
-  const { token, setToken } = useToken();
-
-  if (!token) {
-    return <Login setToken={setToken} /> 
-  } 
 
   return (
     <Router>
