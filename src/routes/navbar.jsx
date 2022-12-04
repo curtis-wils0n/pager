@@ -95,13 +95,13 @@ export default function Navbar() {
                 </MenuItem>
                 <Divider />
                 <MenuItem>
-                  <BookmarkAddedIcon /> <Link className="menulink" to='user/shelf'>My Shelf</Link>
+                  <BookmarkAddedIcon /> <Link className="menulink" to='/user/shelf'>My Shelf</Link>
                 </MenuItem>
                 <MenuItem>
-                  <RateReviewIcon /> <Link className="menulink" to='user/reviews'>My Reviews</Link>
+                  <RateReviewIcon /> <Link className="menulink" to='/user/reviews'>My Reviews</Link>
                 </MenuItem>
                 <MenuItem>
-                  <ListIcon /> <Link className="menulink" to='user/lists'>My Lists</Link>
+                  <ListIcon /> <Link className="menulink" to='/user/lists'>My Lists</Link>
                 </MenuItem>
                 <Divider />
                 <MenuItem>

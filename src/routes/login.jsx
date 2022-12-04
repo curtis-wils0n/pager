@@ -12,6 +12,8 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
+import HomeNavbar from './HomeNavbar';
 
 function Copyright(props) {
   return (
@@ -29,17 +31,18 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function Login() {
+
+  const navigate = useNavigate();
+  
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+    navigate('/')
+    };
+
 
   return (
     <ThemeProvider theme={theme}>
+      <HomeNavbar />
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid

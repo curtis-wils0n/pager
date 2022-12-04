@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './styles/App.css';
 
-import Navbar from './routes/navbar';
 import Home from './routes/home';
 import Login from './routes/login';
 import Register from './routes/register';
@@ -12,6 +11,7 @@ import User from './routes/user';
 import UserShelf from './routes/UserShelf';
 import Lists from './routes/UserLists';
 import UserReviews from './routes/UserReviews';
+import Navbar from './routes/navbar';
 
 function App() {
   return (

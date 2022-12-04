@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import HomeNavbar from './HomeNavbar';
 
 function Copyright(props) {
   return (
@@ -40,6 +41,7 @@ export default function Register() {
 
   return (
     <ThemeProvider theme={theme}>
+      <HomeNavbar />
       <Container component="main" maxWidth="xs">
         <CssBaseline />
         <Box
