@@ -8,9 +8,15 @@ export default function HeroFeatures(props) {
     <>
       <div className="hero-feature-bg">
         <div className="hero-feature-content">
-          <CollectionsBookmarkIcon />
-          <GradeIcon />
-          <DriveFileRenameOutlineIcon/>
+          <CollectionsBookmarkIcon
+            sx={{fontSize: '3em'}}
+          />
+          <GradeIcon
+            sx={{fontSize: '3em'}}
+          />
+          <DriveFileRenameOutlineIcon
+            sx={{fontSize: '3em'}}
+          />
         </div>
         <div className="hero-feature-content">
           <h1>Collect</h1>
@@ -18,9 +24,9 @@ export default function HeroFeatures(props) {
           <h1>Curate</h1>
         </div>
         <div className="hero-feature-content">
-          <p>Test</p>
-          <p>Test</p>
-          <p>Test</p>
+          <p>Organize and show off your ever-expanding library</p>
+          <p>Share your own personal reviews of the books you've read</p>
+          <p>Create lists of books to send to your friends</p>
         </div>
       </div> 
     </>

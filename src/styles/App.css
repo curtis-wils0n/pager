@@ -104,6 +104,11 @@ header li a {
   flex-direction: row;
   justify-content: space-around;
   text-align: center;
+  word-wrap: break-word;
+}
+
+.hero-feature-content p {
+  max-width: 20vw;
 }
 
 .hero-example-bg {
@@ -111,7 +116,24 @@ header li a {
   height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   border: solid 3px black;
   margin-top: 2em;
+}
+
+.hero-example-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.hero-example-books {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.book-cover {
+  border: solid 3px black;
+  box-shadow: 3px 3px black;
 }
