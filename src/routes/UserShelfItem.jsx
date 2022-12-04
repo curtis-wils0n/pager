@@ -5,7 +5,8 @@ export default function UserShelfItem(props) {
 
   return (
     <Grid item xs={3}>
-      <img 
+      <img
+        className="book-cover"
         src={props.book_cover_art_url}
         alt={props.title}
         width='200'

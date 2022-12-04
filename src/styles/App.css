@@ -1,22 +1,16 @@
-header h1 {
-  height: 40px;
-  margin-left: 40px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-}
-
 body {
   height: 125vh;
   background-color:rgb(255, 255, 255);
   font-family: 'Montserrat', sans-serif;
   margin-top: 80px;
   padding: 30px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+header h1 {
+  height: 40px;
+  margin-left: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 main {
@@ -34,11 +28,13 @@ header {
   right: 0;
   height: 80px;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 header * {
-  display: inline;
+  display: flex;
+  justify-content: space-between;
 }
 
 header li {
@@ -53,87 +49,4 @@ header li a {
 /* recommended button width change */
 .MuiSvgIcon-root {
   min-width: 40px;
-}
-
-.hero-bg {
-  background-color: #ff90e8;
-  height: 50vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: solid 3px black;
-}
-
-.welcome {
-  display: flex;
-  align-items: center;
-  color: black;
-  text-align: center;
-  font-family: 'Bungee Shade', cursive;
-  font-weight: 700;
-  font-size: 4em;
-  margin: 20px;
-}
-
-.subtext {
-  color: black;
-  text-align: center;
-  font-family: 'Monserrat', sans-serif;
-  font-size: 40px;
-  font-weight: 400;
-  padding: 2px;
-  margin: 20px;
-}
-
-.hero-feature-bg {
-  background-color: #FFC900;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: solid 3px black;
-  margin-top: 2em;
-}
-
-.hero-feature-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  word-wrap: break-word;
-}
-
-.hero-feature-content p {
-  max-width: 20vw;
-}
-
-.hero-example-bg {
-  background-color: #23A094;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  border: solid 3px black;
-  margin-top: 2em;
-}
-
-.hero-example-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.hero-example-books {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.book-cover {
-  border: solid 3px black;
-  box-shadow: 3px 3px black;
 }

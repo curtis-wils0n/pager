@@ -5,7 +5,8 @@ export default function UserListsItem(props) {
 
   return (
     <Grid item xs={3}>
-    <img 
+    <img
+      className="book-cover"
       src={props.cover_art_url}
       alt={props.title}
       width='200'
