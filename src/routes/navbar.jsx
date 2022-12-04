@@ -30,14 +30,13 @@ export default function Navbar() {
   
   return (
     <>
-      <header class="header">
-        <h1 class="title">
+      <header className="header">
+        <h1 className="title">
           <a href='/'>pager</a>
-          <MenuBookIcon 
-          class="bookicon"/>
+          <MenuBookIcon className="bookicon"/>
         </h1>
         <nav>
-          <div class="topnav">
+          <div className="topnav">
             <React.Fragment>
               <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
                 <Typography sx={{ minWidth: 100 }}>Ryan Magee</Typography>
@@ -89,21 +88,21 @@ export default function Navbar() {
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
               >
                 <MenuItem>
-                  <Avatar /> <Link class="menulink" to='user'>My Profile</Link>
+                  <Avatar /> <Link className="menulink" to='user'>My Profile</Link>
                 </MenuItem>
                 <Divider />
                 <MenuItem>
-                  <BookmarkAddedIcon /> <Link class="menulink" to='user/shelf'>My Shelf</Link>
+                  <BookmarkAddedIcon /> <Link className="menulink" to='user/shelf'>My Shelf</Link>
                 </MenuItem>
                 <MenuItem>
-                  <RateReviewIcon /> <Link class="menulink" to='user/reviews'>My Reviews</Link>
+                  <RateReviewIcon /> <Link className="menulink" to='user/reviews'>My Reviews</Link>
                 </MenuItem>
                 <MenuItem>
-                  <ListIcon /> <Link class="menulink" to='user/lists'>My Lists</Link>
+                  <ListIcon /> <Link className="menulink" to='user/lists'>My Lists</Link>
                 </MenuItem>
                 <Divider />
                 <MenuItem>
-                  <ExitToAppIcon /> <Link class="menulink" to='/'>Logout</Link>
+                  <ExitToAppIcon /> <Link className="menulink" to='/'>Logout</Link>
                 </MenuItem>
               </Menu>
             </React.Fragment>

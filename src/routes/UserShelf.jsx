@@ -22,7 +22,7 @@ export default function UserShelf() {
 
   return (
     <>
-    <div class="sort-buttons">
+    <div className="sort-buttons">
     <div id="add-book-button">
       <form>
         <Button variant="outlined" onClick={displayForm}>Add Book</Button>
@@ -38,12 +38,12 @@ export default function UserShelf() {
         <Button variant="outlined" onClick={sortYear}>Sort By Year</Button>
       </form>
       </div>
-      <div class="add-book-form">
+      <div className="add-book-form">
       {showForm && (
         <FormTemplate type="books" />
       )}
       </div>
-      <div class="book-grid">
+      <div className="book-grid">
       <Grid container spacing={2}>
         {renderedUserShelf}
       </Grid>

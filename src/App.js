@@ -7,6 +7,7 @@ import Navbar from './routes/navbar';
 import Home from './routes/home';
 import Login from './routes/login';
 import Register from './routes/register';
+import Book from './routes/Book'
 import User from './routes/user';
 import UserShelf from './routes/UserShelf';
 import Lists from './routes/UserLists';
@@ -21,6 +22,7 @@ function App() {
         <Route path='/login' element={ <Login /> }></Route>
         <Route path='/register' element={ <Register /> }></Route>
         <Route path='/user' element={ <User /> }></Route>
+        <Route path='/books/:id' element={ <Book /> }></Route>.
         <Route path='/user/shelf' element={ <UserShelf /> }></Route>
         <Route path='/user/lists' element={ <Lists /> }></Route>
         <Route path='/user/reviews' element={ <UserReviews /> }></Route>
