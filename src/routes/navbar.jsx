@@ -20,6 +20,9 @@ export default function Navbar() {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
+
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -32,7 +35,7 @@ export default function Navbar() {
     <>
       <header className="header">
         <h1 className="title">
-          <a href='/'>pager</a>
+          <Link to={'/'}>pager</Link>
           <MenuBookIcon className="bookicon"/>
         </h1>
         <nav>

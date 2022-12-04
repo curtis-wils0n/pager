@@ -62,6 +62,7 @@ export default function useAPIData(initial) {
   const renderedUserShelf = books.map(book =>
     <UserShelfItem
       key={book.id}
+      id={book.id}
       title={book.title}
       book_cover_art_url={book.cover_art_url}
       author={book.author_name}
