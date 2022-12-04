@@ -3,7 +3,6 @@ import FormTemplate from "../components/Form/FormTemplate";
 import useAPIData from '../hooks/useAPIData';
 import { Grid, Button } from '@mui/material'
 import '../styles/UserShelf.css';
-import Navbar from '../routes/navbar';
 
 export default function UserShelf() {
 
@@ -23,7 +22,6 @@ export default function UserShelf() {
 
   return (
     <>
-    <Navbar />
     <div className="sort-buttons">
     <div id="add-book-button">
       <form>
