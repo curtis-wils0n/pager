@@ -12,6 +12,7 @@ import UserShelf from './routes/UserShelf';
 import Lists from './routes/UserLists';
 import UserReviews from './routes/UserReviews';
 import Navbar from './routes/navbar';
+import Dashboard from './routes/Dashboard';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={ <Home /> }></Route>
+        <Route path='/dashboard' element={ <Dashboard /> }></Route>
         <Route path='/login' element={ <Login /> }></Route>
         <Route path='/register' element={ <Register /> }></Route>
         <Route path='/user' element={ <User /> }></Route>
