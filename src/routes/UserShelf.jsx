@@ -22,31 +22,32 @@ export default function UserShelf() {
 
   return (
     <>
-    <div className="sort-buttons">
-    <div id="add-book-button">
-      <form>
-        <Button variant="outlined" onClick={displayForm}>Add Book</Button>
-      </form>
-      </div>
-      <form>
-        <Button variant="outlined" onClick={sortName}>Sort By Author</Button>
-      </form>
-      <form>
-        <Button variant="outlined" onClick={sortTitle}>Sort By Title</Button>
-      </form>
-      <form>
-        <Button variant="outlined" onClick={sortYear}>Sort By Year</Button>
-      </form>
+      <h1 className="page-header">My Shelf</h1>
+      <div className="sort-buttons">
+        <div id="add-book-button">
+          <form>
+            <Button variant="outlined" onClick={displayForm}>Add Book</Button>
+          </form>
+        </div>
+        <form>
+          <Button variant="outlined" onClick={sortName}>Sort By Author</Button>
+        </form>
+        <form>
+          <Button variant="outlined" onClick={sortTitle}>Sort By Title</Button>
+        </form>
+        <form>
+          <Button variant="outlined" onClick={sortYear}>Sort By Year</Button>
+        </form>
       </div>
       <div className="add-book-form">
-      {showForm && (
-        <FormTemplate type="books" />
-      )}
+        {showForm && (
+          <FormTemplate type="books" />
+        )}
       </div>
       <div className="book-grid">
-      <Grid container spacing={2}>
-        {renderedUserShelf}
-      </Grid>
+        <Grid container spacing={2}>
+          {renderedUserShelf}
+        </Grid>
       </div>
     </>
   );

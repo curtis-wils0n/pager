@@ -83,3 +83,14 @@ footer {
   padding: 8px;
   text-align: center;
 }
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 3em;
+  background-color: #ff90e8;
+  border: solid 3px black;
+  height: 60px;
+}
