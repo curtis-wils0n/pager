@@ -13,6 +13,7 @@ import Lists from './routes/UserLists';
 import UserReviews from './routes/UserReviews';
 import Navbar from './routes/navbar';
 import Dashboard from './routes/Dashboard';
+import Footer from './components/Footer.jsx';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='/user/lists' element={ <Lists /> }></Route>
         <Route path='/user/reviews' element={ <UserReviews /> }></Route>
       </Routes>
+      <Footer />
     </Router>
   );
 }

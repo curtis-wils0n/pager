@@ -70,3 +70,16 @@ header li a {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #FFC900;
 }
+
+/* Footer */
+footer {
+  margin-top: 10px;
+  border-top-style: solid;
+  border-top-width: 3px;
+  background-color: white;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  text-align: center;
+}
