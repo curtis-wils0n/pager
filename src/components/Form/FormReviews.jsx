@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Input, Rating, Button, Grid, Switch, Typography, Stack } from "@mui/material";
+import { Box, Input, Rating, Button, Grid, Stack } from "@mui/material";
 import useAPIData from '../../hooks/useAPIData';
 import axios from "axios";
 
@@ -7,9 +7,17 @@ export default function FormReviews(props) {
 
   const [recommended, setRecommended] = useState(false);
 
-  const changeRecommended = () => {
-    setRecommended(!recommended);
+  const setRecommendedValue = () => {
+    setRecommended(true);
   }
+
+  const setNotRecommendedValue = () => {
+    setRecommended(false);
+  }
+
+  // const changeRecommended = () => {
+  //   setRecommended(!recommended);
+  // }
 
   const {
     setStars
@@ -47,7 +55,6 @@ export default function FormReviews(props) {
         <Grid item xs={12}>
           <Rating
             name="stars"
-
             onChange={(newValue) => {
               setStars(newValue);
             }}
@@ -55,15 +62,18 @@ export default function FormReviews(props) {
         </Grid>
         <Grid item xs={2}>
           <Stack direction="row" spacing={1} alignItems="center">
-            <Typography>Not Recommended</Typography>
-            <Switch 
-              name="recommended"
-              defaultValue={false}
-              onChange={() => {
-                changeRecommended();
-              }}
-            />
-            <Typography>Recommended</Typography>
+            <button onClick={e => {
+              e.preventDefault();
+              setNotRecommendedValue();
+            }}>
+              Not Recommended
+            </button>
+            <button onClick={e => {
+              e.preventDefault();
+              setRecommendedValue();
+            }}>
+              Recommended
+            </button>
           </Stack>  
         </Grid>
 
