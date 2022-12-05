@@ -10,17 +10,14 @@ export default function Navbar() {
     <>
       <header className="header">
         <h1 className="title">
-          <a href='/'>pager</a>
-          <MenuBookIcon className="bookicon"/>
+          <Link to={'/'}>pager <MenuBookIcon /></Link>
         </h1>
-          <div className="register-link">
-          <Link className="register-link" to='register'>Register</Link>
-          </div>
         <nav>
-          <div className="topnav">
-            <div className="login-link">
-          <Link className="login-link" to='login'>Login</Link>
+          <div className="home-link">
+          <Link className="home-link-text" to={'/register'}>Register</Link>
           </div>
+          <div className="login-link">
+          <Link className="login-link-text" to={'/login'}>Login</Link>
           </div>
         </nav>
       </header>
