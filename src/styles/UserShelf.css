@@ -1,11 +1,11 @@
-div .sort-buttons {
+.sort-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  gap: 10px;
+  justify-content: space-between;
   /* margin-bottom: 40px; */
   position: static;
 }
-
 
 button.MuiButton-root {
   color: white;

@@ -24,20 +24,22 @@ export default function UserShelf() {
     <>
       <h1 className="page-header">My Shelf</h1>
       <div className="sort-buttons">
-        <div id="add-book-button">
+        <div>
           <form>
             <Button variant="outlined" onClick={displayForm}>Add Book</Button>
           </form>
         </div>
-        <form>
-          <Button variant="outlined" onClick={sortName}>Sort By Author</Button>
-        </form>
-        <form>
-          <Button variant="outlined" onClick={sortTitle}>Sort By Title</Button>
-        </form>
-        <form>
-          <Button variant="outlined" onClick={sortYear}>Sort By Year</Button>
-        </form>
+        <div className="sort-buttons">
+          <form>
+            <Button variant="outlined" onClick={sortName}>Sort By Author</Button>
+          </form>
+          <form>
+            <Button variant="outlined" onClick={sortTitle}>Sort By Title</Button>
+          </form>
+          <form>
+            <Button variant="outlined" onClick={sortYear}>Sort By Year</Button>
+          </form>
+        </div>
       </div>
       <div className="add-book-form">
         {showForm && (
