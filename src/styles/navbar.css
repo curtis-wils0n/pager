@@ -22,16 +22,6 @@
   text-decoration: none;
 }
 
-.login-link {
-  color: white;
-  text-decoration: none;
-}
-
-.login-link:hover {
-  color: black;
-  text-decoration: underline;
-}
-
 .home-link {
   display: flex;
   flex-direction: column;
@@ -45,7 +35,6 @@
   text-decoration: underline;
 }
 
-
 .home-link-text {
   display: flex;
   flex-direction: column;
@@ -55,6 +44,30 @@
   text-decoration: none;
   color: black;
   font-family: 'Monserrat', sans-serif;
+}
+
+.login-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left-style: solid;
+  text-decoration: none;
+  background-color: black;
+}
+
+.login-link-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 40px;
+  margin-left: 40px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Monserrat', sans-serif;
+}
+
+.login-link-text:hover {
+text-decoration: underline;
 }
 
 div .menu-button {
