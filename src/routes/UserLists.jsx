@@ -16,7 +16,6 @@ export default function UserLists() {
     renderedLists
   } = useAPIData()
 
-  console.log(renderedLists);
   const list1 = renderedLists.filter(list => list.key === '1')
   const list2 = renderedLists.filter(list => list.key === '3')
 
