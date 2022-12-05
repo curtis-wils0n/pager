@@ -1,0 +1,19 @@
+.book-bg {
+  background-color: #23A094;
+  display: flex;
+  padding: 2vh;
+  flex-direction: row;
+  align-items: center;
+  border: solid 3px black;
+}
+
+#book-info {
+  margin: 10px;
+}
+
+#book-view {
+  position: static;
+  border: solid 3px black;
+  box-shadow: 3px 3px black;
+  margin: 10px
+}

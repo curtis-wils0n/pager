@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
+import '../styles/Book.css'
+
 export default function Book (props) {
 
   let {id} = useParams();
@@ -17,17 +19,22 @@ export default function Book (props) {
   }, [id])
 
   return (
-    <>
-      <img
-        className="book-cover"
-        src={book.cover_art_url}
-        alt={book.title}
-        width='200'
-        height='300'
-      />
-      <p>{book.title} ({book.year}) by {book.author_name}</p>
-      <p>Published by {book.publisher_name} ({book.location})</p>
-      <p>{book.description}</p>
-    </>
+    <div className="book-bg">
+      <div>
+        <img
+          id='book-view'
+          src={book.cover_art_url}
+          alt={book.title}
+          width='200'
+          height='300'
+        />
+      </div>
+      <div id="book-info">
+        <h1>{book.title} ({book.year})</h1>
+        <h2>{book.author_name}</h2>
+        <p>Published by {book.publisher_name} ({book.location})</p>
+        <p><i>{book.description}</i></p>
+      </div>
+    </div>
   )
 }
