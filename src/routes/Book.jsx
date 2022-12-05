@@ -8,6 +8,7 @@ export default function Book (props) {
   const [book, setBook] = useState(<Book />);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     Promise.all([
       axios.get(`/api/books/${id}`)
     ]).then((all) => {
@@ -25,6 +26,8 @@ export default function Book (props) {
         height='300'
       />
       <p>{book.title} ({book.year}) by {book.author_name}</p>
+      <p>Published by {book.publisher_name} ({book.location})</p>
+      <p>{book.description}</p>
     </>
   )
 }
