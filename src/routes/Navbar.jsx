@@ -8,12 +8,13 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
 import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';
 import RateReviewIcon from '@mui/icons-material/RateReview';
 import ListIcon from '@mui/icons-material/List';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import MenuIcon from '@mui/icons-material/Menu';
 import '../styles/navbar.css';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
 
 
 export default function Navbar() {
@@ -35,15 +36,17 @@ export default function Navbar() {
     <>
       <header className="header">
         <h1 className="title">
-          <Link to={'/'}>pager</Link>
-          <MenuBookIcon className="bookicon"/>
+          <Link to={'/'}>pager <MenuBookIcon /></Link>
         </h1>
         <nav>
-          <div className="topnav">
+          <div className="home-link">
+          <Link className="home-link-text" to={'/dashboard'}>Dashboard</Link>
+          </div>
+          <div className="user-menu">
             <React.Fragment>
               <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-                <Typography sx={{ minWidth: 100 }}>Ryan Magee</Typography>
-                <Tooltip title="Account settings">
+                <Typography className="user-name-nav" sx={{ minWidth: 100 }}><strong> Welcome, abby123!</strong></Typography>
+                <Tooltip title="Menu">
                   <IconButton
                     onClick={ handleClick }
                     size="small"
@@ -52,7 +55,7 @@ export default function Navbar() {
                     aria-haspopup="true"
                     aria-expanded={ open ? 'true' : undefined }
                     >
-                    <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+                    <Avatar className="menu-button" sx={{ width: 32, height: 32, color: 'white' }}><MenuIcon /></Avatar>
                   </IconButton>
                 </Tooltip>
               </Box>

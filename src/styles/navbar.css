@@ -1,29 +1,20 @@
-nav {
+.user-menu {
   background-color: black;
-  height: 80px;
-  border-style:solid;
+  border-right-style: solid;
+  border-left-style: solid;
   border-color: black;
-  border-bottom-width: 2px
-}
-
-nav:hover {
-  background-color:#ff90e8;
+  color: white;
 }
 
 .title a {
   text-decoration: none;
   color: black;
+  font-family: 'Bungee', cursive;
 }
 
 .topnav {
   margin: 30px;
   color: white;
-}
-
-.bookicon {
-  height: 30px;
-  margin-left: 10px;
-  margin-top: 5px;
 }
 
 .menulink {
@@ -36,3 +27,46 @@ nav:hover {
   text-decoration: none;
 }
 
+.login-link:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.home-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left-style: solid;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  background-color: #ff90e8;
+  text-decoration: underline;
+}
+
+
+.home-link-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 40px;
+  margin-left: 40px;
+  text-decoration: none;
+  color: black;
+  font-family: 'Monserrat', sans-serif;
+}
+
+div .menu-button {
+  margin-right: 40px;
+  background-color: white;
+  color: black;
+}
+
+p.MuiTypography-root {
+  margin-left: 40px;
+}
+
+.MenuBookIcon {
+  margin-top:10px;
+}
