@@ -1,0 +1,85 @@
+/* User Profile section */
+
+.card{
+  -moz-border-radius: 2%;
+  -webkit-border-radius: 2%;
+  border-radius: 2%;
+  box-shadow: 5px 5px 0 rgba(0,0,0,0.08);
+}
+
+.profile .profile-body {
+  padding: 20px;
+  background: #f7f7f7;
+}
+
+.profile .profile-bio {
+  background: #23A094;
+  position: relative;
+  padding: 15px 10px 5px 15px;
+  border-style: solid;
+  border-width: thick;
+}
+
+.profile .profile-bio a {
+  left: 50%;
+  bottom: 20px;
+  margin: -62px;
+  text-align: center;
+  position: absolute;
+}
+
+.profile .profile-bio h2 {
+  margin-top: 0;
+  font-weight: 200;
+}
+
+.user-name {
+  color: #000000;
+  margin-top: 5px;
+  text-shadow: none;
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+}
+h2 {
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.img-thumbnail {
+  width: 400px;
+  margin-left: 40px;
+  margin-bottom: 0px;
+  background-color: #ff90e8;
+  border-style: solid;
+  border-width: thick;
+  border-color: #FFC900;
+  border-radius: 200px;
+}
+
+div.row {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  align-items: center;
+  margin-right: 30px;
+  margin-bottom: 40px;
+}
+
+.col-md-7 {
+  margin-left:50px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+margin-top: 20px;
+}
+
+div .profile-pic {
+  width: 850px;
+}
+
+
