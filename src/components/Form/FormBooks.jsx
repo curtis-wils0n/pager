@@ -23,6 +23,7 @@ export default function FormContent(props) {
           author_name,
           book_year,
           book_cover_url,
+          description,
           genre,
           pub_name,
           pub_location
@@ -34,6 +35,7 @@ export default function FormContent(props) {
             author_name: author_name.value,
             book_year: book_year.value,
             book_cover_art_url: book_cover_url.value,
+            description: description.value,
             genre: genre.value,
             pub_name: pub_name.value,
             pub_location: pub_location.value
@@ -70,6 +72,13 @@ export default function FormContent(props) {
             name="book_cover_url" 
             type="text" 
             placeholder="Book Cover URL"
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <Input 
+            name="description" 
+            type="text" 
+            placeholder="Description"
           />
         </Grid>
         <Grid item xs={12}>
