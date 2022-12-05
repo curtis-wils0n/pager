@@ -3,15 +3,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './styles/App.css';
 
-import Home from './routes/home';
-import Login from './routes/login';
-import Register from './routes/register';
+import Home from './routes/Home';
+import Login from './routes/Login';
+import Register from './routes/Register';
 import Book from './routes/Book'
-import User from './routes/user';
+import User from './routes/User';
 import UserShelf from './routes/UserShelf';
 import Lists from './routes/UserLists';
 import UserReviews from './routes/UserReviews';
-import Navbar from './routes/navbar';
+import Navbar from './routes/Navbar';
 import Dashboard from './routes/Dashboard';
 import Footer from './components/Footer.jsx';
 
