@@ -47,7 +47,7 @@ export default function FormReviews(props) {
             book_id: book_id.value
           })
         ]).then(() => {
-          console.log('complete');
+          alert('Review submitted');
         });
       }}
     >
