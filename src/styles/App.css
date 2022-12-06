@@ -47,6 +47,14 @@ header li a {
   text-decoration: none;
 }
 
+/* review container */
+.review-container {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  padding: 10px;
+}
+
 /* recommended button width change */
 .MuiSvgIcon-root {
   min-width: 40px;

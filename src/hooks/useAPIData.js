@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import UserShelfItem from "../routes/UserShelfItem";
 import UserReviewsItem from "../routes/UserReviewsItem";
+import UserAllReviewsItem from "../routes/UserAllReviewsItem";
 import UserListsItem from "../routes/UserListsItem";
 import axios from 'axios';
 
@@ -101,6 +102,38 @@ export default function useAPIData(initial) {
     />
   )
 
+  // render ALL reviews
+
+  const [allreviews, setAllReviews] = useState([]);
+
+  useEffect(() => {
+    const allreviewURL = '/api/allreviews';
+    Promise.all([
+      axios.get(allreviewURL)
+    ]).then((all) => {
+      setAllReviews(all[0].data);
+    });
+  }, []);
+
+  const renderedAllReviews = allreviews.map(review => 
+    <UserAllReviewsItem 
+      key={review.id}
+      id={review.book_id}
+      stars={review.stars}
+      recommended={review.recommended}
+      description={review.description}
+      first_name={review.first_name}
+      last_name={review.last_name}
+      title={review.title}
+      author_name={review.author_name}
+      year={review.year}
+      publisher_name={review.publisher_name}
+      location={review.location}
+      cover_art_url={review.cover_art_url}
+      genre={review.genre}
+    />
+  )
+
   // Render user list titles and description 
   const [lists, setLists] = useState([]);
   
@@ -133,6 +166,7 @@ export default function useAPIData(initial) {
     stars,
     renderedUserShelf,
     renderedReviews,
-    renderedLists 
+    renderedLists,
+    renderedAllReviews
   }
 }
