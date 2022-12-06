@@ -52,13 +52,13 @@ h2 {
   background-color: #ff90e8;
   border-style: solid;
   border-width: thick;
-  border-color: #FFC900;
+  border-color: #000000;
   border-radius: 200px;
 }
 
 div.row {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 40px;
   align-items: center;
   margin-right: 30px;
@@ -66,7 +66,7 @@ div.row {
 }
 
 .col-md-7 {
-  margin-left:50px;
+  margin-right: 200px;
 }
 
 .user-info {
@@ -98,4 +98,9 @@ margin-top: 20px;
   margin: 10px
 }
 
-
+.currently-reading {
+  margin-right: 100px;
+  padding: 90px;
+  border-left-style: solid;
+  border-width: thick;
+}

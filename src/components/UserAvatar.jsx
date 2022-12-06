@@ -1,3 +1,5 @@
+import BorderColorIcon from '@mui/icons-material/BorderColor';
+
 export default function UserAvatar() {
 
   return (
@@ -18,6 +20,7 @@ export default function UserAvatar() {
                         </div>
                         <hr/>
                         <p><strong>Love me some good books.</strong></p>
+                    </div>
                         <div class="currently-reading">
                           <h2>Currently Reading:</h2>
                             <img
@@ -27,7 +30,6 @@ export default function UserAvatar() {
           width={150}
           height={225}
         />
-                    </div>
                     </div>
                 </div>    
             </div>
