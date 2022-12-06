@@ -1,7 +1,7 @@
 import React from "react";
 import StarRating from "../components/StarRating.js";
-import { Grid } from '@mui/material'
 import { useNavigate } from "react-router-dom";
+import '../styles/Review.css'
 
 export default function UserReviewsItem(props) {
 
@@ -12,18 +12,22 @@ export default function UserReviewsItem(props) {
   }
 
   return (
-    <Grid item xs={3}>
-      <img
-        onClick={() => handleClick(props.id)}
-        className="book-cover"
-        src={props.cover_art_url}
-        alt={props.title}
-        width='200'
-        height='300'
-      />
-      <StarRating rating={props.stars} />
-      <p>{!props.recommended ? "Not" : ""} Recommended</p>
-      <p>{props.first_name} {props.last_name} said: "{props.description}"</p>
-    </Grid>
+    <div className={ props.recommended ? "review-card positive" : "review-card negative" }>
+      <div>
+        <img
+          onClick={() => handleClick(props.id)}
+          className="book-cover"
+          src={props.cover_art_url}
+          alt={props.title}
+          width='200'
+          height='300'
+        />
+      </div>
+      <div className="review-info">
+        <StarRating rating={props.stars} />
+        <p>{!props.recommended ? "Not" : ""} Recommended</p>
+        <p>You said: "{props.description}"</p>
+      </div>
+    </div>
   );
 }
