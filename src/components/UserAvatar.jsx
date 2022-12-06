@@ -7,7 +7,7 @@ export default function UserAvatar() {
             <div class="profile-bio">
                 <div class="row">
                     <div class="col-md-5 text-center">
-                        <img class="img-thumbnail md-margin-bottom-10" src="http://cdn.onlinewebfonts.com/svg/img_264570.png" alt=""/>
+                        <img class="img-thumbnail md-margin-bottom-10" src="https://img.freepik.com/premium-vector/young-muslimah-woman-hold-quran-book-profile-aesthetic-illustration_513640-467.jpg" alt=""/>
                     </div>
                     <div class="col-md-7">
                         <h2 class="user-name"><strong>Abigal Abraham</strong></h2>
@@ -18,6 +18,16 @@ export default function UserAvatar() {
                         </div>
                         <hr/>
                         <p><strong>Love me some good books.</strong></p>
+                        <div class="currently-reading">
+                          <h2>Currently Reading:</h2>
+                            <img
+          className="book-cover"
+          src="https://github.com/curtis-wils0n/pager-api/blob/main/src/db/assetts/Dune_cover.jpeg?raw=true"
+          alt="Dune cover"
+          width={150}
+          height={225}
+        />
+                    </div>
                     </div>
                 </div>    
             </div>
