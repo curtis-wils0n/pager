@@ -11,7 +11,7 @@ export default function UserListsItem(props) {
   }
 
   return (
-    <Grid item xs={3}>
+    <Grid item xs={2}>
     <img
       onClick={() => handleClick(props.id)}
       className="book-cover"

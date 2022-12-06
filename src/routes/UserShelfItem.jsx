@@ -11,7 +11,7 @@ export default function UserShelfItem(props) {
   }
 
   return (
-    <Grid item xs={3}>
+    <Grid item xs={2} display='flex' flexDirection='column' alignItems='center'>
       <img
         onClick={() => handleClick(props.id)}
         className="book-cover"
