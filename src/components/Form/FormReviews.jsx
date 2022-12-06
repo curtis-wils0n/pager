@@ -33,8 +33,6 @@ export default function FormReviews(props) {
         const { 
           stars,
           description,
-          user_id,
-          book_id
         } = data.target;
         const reviewURL = '/api/reviews';
         console.log(recommended);
@@ -43,8 +41,8 @@ export default function FormReviews(props) {
             stars: stars.value,
             recommended,
             description: description.value,
-            user_id: user_id.value,
-            book_id: book_id.value
+            user_id: props.user_id,
+            book_id: props.book_id
           })
         ]).then(() => {
           alert('Review submitted');
@@ -76,27 +74,12 @@ export default function FormReviews(props) {
             </button>
           </Stack>  
         </Grid>
-
         <Grid item xs={12}>
           <Input
             name="description"
             type="text"
             placeholder="Enter your review!"
             sx={{width: .452}}
-          />
-        </Grid>
-        <Grid item xs={3}>
-          <Input 
-            name="user_id"
-            type="number"
-            placeholder="user_id"
-          />
-        </Grid>
-        <Grid item xs={9}>
-          <Input 
-            name="book_id"
-            type="number"
-            placeholder="book_id"
           />
         </Grid>
         <Grid item xs={6}>

@@ -38,8 +38,10 @@ export default function Book (props) {
           <p><i>{book.description}</i></p>
         </div>
       </div>
-      {/* TODO: Add props for bookid, userid */}
-      <FormReviews />
+      <FormReviews
+        book_id={book.id}
+        user_id={1}
+      />
     </>
   )
 }
