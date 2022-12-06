@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Box, Input, Rating, Button, Grid, Stack } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import useAPIData from '../../hooks/useAPIData';
 import axios from "axios";
 
@@ -15,9 +16,7 @@ export default function FormReviews(props) {
     setRecommended(false);
   }
 
-  // const changeRecommended = () => {
-  //   setRecommended(!recommended);
-  // }
+  const navigate = useNavigate();
 
   const {
     setStars
@@ -29,13 +28,13 @@ export default function FormReviews(props) {
       noValidate
       autoComplete="off"
       sx={{ flexGrow: 1 }}
-      onSubmit={(data) => {
+      onSubmit={(event) => {
+        event.preventDefault();
         const { 
           stars,
           description,
-        } = data.target;
+        } = event.target;
         const reviewURL = '/api/reviews';
-        console.log(recommended);
         Promise.all([
           axios.put(reviewURL, {
             stars: stars.value,
@@ -45,7 +44,7 @@ export default function FormReviews(props) {
             book_id: props.book_id
           })
         ]).then(() => {
-          alert('Review submitted');
+          navigate('/user/reviews');
         });
       }}
     >
