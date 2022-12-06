@@ -1,9 +1,12 @@
 import React from "react";
 import { Box, Input, Button, Grid } from "@mui/material";
 import axios from "axios";
+import useAPIData from "../../hooks/useAPIData";
+import '../../styles/BookContainer.css'
 
 export default function FormLists(props) {
 
+  const { renderedUserShelf } = useAPIData();
 
   return (
     <Box
@@ -44,7 +47,17 @@ export default function FormLists(props) {
             placeholder="Description"
           />
         </Grid>
-        {/* TODO: Add a hardcoded bookshelf */}
+        <Grid item xs={12}>
+          <div className="book-container">
+            {renderedUserShelf.map(book => (
+              <img 
+                className="book-container-item"
+                alt={book.props.title}
+                src={book.props.book_cover_art_url}
+              />
+            ))}
+          </div>
+        </Grid>
         <Grid item xs={6}>
           <Button
             variant="outlined"

@@ -1,0 +1,19 @@
+.book-container {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  padding: 10px;
+}
+
+.book-container-item {
+  flex-shrink: 0;
+  width: 200px;
+  height: 300px;
+  margin-left: 1em;
+  position: static;
+  border: solid 3px black;
+}
+.book-container-item:hover {
+  filter: drop-shadow(3px 3px black);
+  cursor: pointer;
+}
