@@ -85,6 +85,7 @@ export default function useAPIData(initial) {
   const renderedReviews = reviews.map(review => 
     <UserReviewsItem 
       key={review.id}
+      id={review.book_id}
       stars={review.stars}
       recommended={review.recommended}
       description={review.description}
@@ -115,6 +116,7 @@ export default function useAPIData(initial) {
   const renderedLists = lists.map(list => 
     <UserListsItem 
       key={list.id}
+      id={list.book_id}
       title={list.title}
       cover_art_url={list.cover_art_url}
     />
