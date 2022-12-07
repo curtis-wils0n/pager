@@ -28,6 +28,15 @@ import { Grid } from "@mui/material";
      </div>
    </Grid>
    </div>
+   <h1 className="page-header">Check out these lists!</h1>
+   <div class="fake-list-title">
+   <p>Chloe's top books of the year</p>
+   <p>Must reads!!</p>
+   </div>
+   <div class="dash-list">
+    <img class="list-image" src="https://i.imgur.com/QLsAXRx.png" alt=""/>
+    <img class="list-image" src="https://i.imgur.com/3W7RI64.png" alt=""/>
+    </div>
 </>
   )
   }

@@ -55,6 +55,21 @@ header li a {
   padding: 10px;
 }
 
+/* fake list image sizing */
+.list-image {
+  width: 500px;
+}
+
+.dash-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.fake-list-title {
+  display: flex;
+  justify-content: space-around;
+}
+
 /* recommended button width change */
 .MuiSvgIcon-root {
   min-width: 40px;
