@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import UserShelfItem from "../components/UserShelfItem";
 import UserReviewsItem from "../components/UserReviewsItem";
 import UserListsItem from "../components/UserListsItem";
-import UserAllReviewsItem from "../routes/UserAllReviewsItem";
+import UserAllReviewsItem from "../components/UserAllReviewsItem";
 import axios from 'axios';
 
 export default function useAPIData(initial) {
