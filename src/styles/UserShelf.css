@@ -12,12 +12,13 @@ button.MuiButton-root {
   background-color:black;
   border: black;
   position: static;
+  border-radius: 0;
 }
 
 button.MuiButton-root:hover {
-  background-color: rgb(255, 78, 243);
-  color:black;
+  background-color: #ff90e8;
   border:pink;
+  color: black;
 }
 
 .add-book-form {

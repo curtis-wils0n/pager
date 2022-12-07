@@ -26,18 +26,18 @@ export default function UserShelf() {
       <div className="sort-buttons">
         <div>
           <form>
-            <Button variant="outlined" onClick={displayForm}>Add Book</Button>
+            <Button variant="outlined" disableRipple onClick={displayForm}>Add Book</Button>
           </form>
         </div>
         <div className="sort-buttons">
           <form>
-            <Button variant="outlined" onClick={sortName}>Sort By Author</Button>
+            <Button variant="outlined" disableRipple onClick={sortName}>Sort By Author</Button>
           </form>
           <form>
-            <Button variant="outlined" onClick={sortTitle}>Sort By Title</Button>
+            <Button variant="outlined" disableRipple onClick={sortTitle}>Sort By Title</Button>
           </form>
           <form>
-            <Button variant="outlined" onClick={sortYear}>Sort By Year</Button>
+            <Button variant="outlined" disableRipple onClick={sortYear}>Sort By Year</Button>
           </form>
         </div>
       </div>

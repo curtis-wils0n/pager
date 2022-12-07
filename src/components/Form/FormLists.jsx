@@ -61,6 +61,7 @@ export default function FormLists(props) {
         <Grid item xs={6}>
           <Button
             variant="outlined"
+            disableRipple
             type="submit"
             sx={{ width: .91 }}
           >
