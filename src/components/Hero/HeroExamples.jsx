@@ -1,6 +1,5 @@
 export default function HeroExamples(props) {
 
-
   return (
     <div className="hero-example-bg">
       <div className="hero-example-content">

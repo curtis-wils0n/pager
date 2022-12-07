@@ -7,7 +7,11 @@ export default function UserAvatar() {
           <div class="profile-bio">
             <div class="row">
               <div class="col-md-5 text-center">
-                <img class="img-thumbnail md-margin-bottom-10" src="https://img.freepik.com/premium-vector/young-muslimah-woman-hold-quran-book-profile-aesthetic-illustration_513640-467.jpg" alt=""/>
+                <img
+                  class="img-thumbnail md-margin-bottom-10"
+                  src="https://img.freepik.com/premium-vector/young-muslimah-woman-hold-quran-book-profile-aesthetic-illustration_513640-467.jpg"
+                  alt=""
+                />
               </div>
               <div class="col-md-7">
                 <h2 class="user-name"><strong>Abigal Abraham</strong></h2>
