@@ -14,7 +14,7 @@ import { Grid } from "@mui/material";
     <div class="review-container">
       {renderedAllReviews}
     </div>
-    <h1 className="page-header">Popular Books</h1>
+    <h1 className="page-header-books">Popular Books</h1>
     <div>
      <Grid item xs={12}>
      <div className="book-container">
@@ -28,10 +28,10 @@ import { Grid } from "@mui/material";
      </div>
    </Grid>
    </div>
-   <h1 className="page-header">Check out these lists!</h1>
+   <h1 className="page-header-lists">Check out these lists!</h1>
    <div class="fake-list-title">
-   <p>Chloe's top books of the year</p>
-   <p>Must reads!!</p>
+   <p><strong>Chloe's top books of the year</strong></p>
+   <p><strong>Must reads!!</strong></p>
    </div>
    <div class="dash-list">
     <img class="list-image" src="https://i.imgur.com/QLsAXRx.png" alt=""/>
