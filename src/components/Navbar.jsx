@@ -1,28 +1,29 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import Box from '@mui/material/Box';
-import Avatar from '@mui/material/Avatar';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Tooltip from '@mui/material/Tooltip';
+import {
+  Box,
+  Avatar,
+  Menu,
+  MenuItem,
+  Divider,
+  IconButton,
+  Tooltip,
+  Typography,
+} from '@mui/material';
+
 import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';
 import RateReviewIcon from '@mui/icons-material/RateReview';
 import ListIcon from '@mui/icons-material/List';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import MenuIcon from '@mui/icons-material/Menu';
-import '../styles/navbar.css';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 
+import '../styles/navbar.css';
 
 export default function Navbar() {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
-
-
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -30,8 +31,7 @@ export default function Navbar() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-  
-  
+
   return (
     <>
       <header className="header">

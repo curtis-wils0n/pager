@@ -11,7 +11,7 @@ import User from './routes/User';
 import UserShelf from './routes/UserShelf';
 import Lists from './routes/UserLists';
 import UserReviews from './routes/UserReviews';
-import Navbar from './routes/Navbar';
+import Navbar from './components/Navbar';
 import Dashboard from './routes/Dashboard';
 import Footer from './components/Footer.jsx';
 

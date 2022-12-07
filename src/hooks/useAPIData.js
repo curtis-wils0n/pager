@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import UserShelfItem from "../routes/UserShelfItem";
-import UserReviewsItem from "../routes/UserReviewsItem";
-import UserListsItem from "../routes/UserListsItem";
+import UserShelfItem from "../components/UserShelfItem";
+import UserReviewsItem from "../components/UserReviewsItem";
+import UserListsItem from "../components/UserListsItem";
 import axios from 'axios';
 
 
