@@ -55,6 +55,14 @@ header li a {
   padding: 10px;
 }
 
+.positive {
+  margin-right: 20px;
+}
+
+.negative {
+  margin-right: 20px;
+}
+
 /* fake list image sizing */
 .list-image {
   width: 500px;
@@ -63,11 +71,34 @@ header li a {
 .dash-list {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 40px;
 }
 
 .fake-list-title {
   display: flex;
   justify-content: space-around;
+}
+
+.page-header-books {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 3em;
+  background-color: #FFC900;
+  border: solid 3px black;
+  height: 60px;
+}
+
+.page-header-lists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 3em;
+  background-color: #31cd15;
+  border: solid 3px black;
+  height: 60px;
 }
 
 /* recommended button width change */
