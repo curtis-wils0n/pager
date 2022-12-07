@@ -1,5 +1,5 @@
 import React from "react";
-import StarRating from "../components/StarRating.js";
+import StarRating from "../components/StarRating";
 import { useNavigate } from "react-router-dom";
 import '../styles/Review.css'
 
