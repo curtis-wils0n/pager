@@ -39,6 +39,7 @@
   text-shadow: none;
   font-weight: normal;
   font-family: 'Open Sans', sans-serif;
+  text-decoration: underline;
 }
 h2 {
   font-size: 24px;
@@ -103,4 +104,12 @@ margin-top: 20px;
   padding: 90px;
   border-left-style: solid;
   border-width: thick;
+}
+
+.edit-profile {
+  margin-bottom: 450px;
+}
+
+.edit-profile:hover {
+  color: white;
 }

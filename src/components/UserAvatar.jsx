@@ -1,3 +1,5 @@
+import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined';
+
 export default function UserAvatar() {
 
   return (
@@ -13,8 +15,8 @@ export default function UserAvatar() {
                 <h2 class="user-name"><strong>Abigal Abraham</strong></h2>
                   <div class="user-info">
                     <span>Username:<strong> abby123</strong></span>
-                    <span># of Books read:<strong> 15</strong></span>
-                    <span># of Books reviewed:<strong> 7</strong></span>
+                    <span># of Books read:<strong> 24</strong></span>
+                    <span># of Books reviewed:<strong> 3</strong></span>
                   </div>
                 <hr/>
                 <p><strong>Love me some good books.</strong></p>
@@ -29,6 +31,9 @@ export default function UserAvatar() {
                   height={225}
                 />
               </div>
+              <div class="edit-profile">
+                <BorderColorOutlinedIcon />
+                </div>
             </div>    
           </div>
     	  </div>

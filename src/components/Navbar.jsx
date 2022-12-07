@@ -94,7 +94,7 @@ export default function Navbar() {
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
               >
                 <MenuItem>
-                  <Avatar /> <Link className="menulink" to='user'>My Profile</Link>
+                <Avatar alt="Remy Sharp" src="https://img.freepik.com/premium-vector/young-muslimah-woman-hold-quran-book-profile-aesthetic-illustration_513640-467.jpg" /> <Link className="menulink" to='user'>My Profile</Link>
                 </MenuItem>
                 <Divider />
                 <MenuItem>
