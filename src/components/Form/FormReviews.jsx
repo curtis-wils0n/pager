@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Box, Input, Rating, Button, Grid, Stack } from "@mui/material";
+import {
+  Box,
+  Input,
+  Rating,
+  Button,
+  Grid,
+} from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import useAPIData from '../../hooks/useAPIData';
 import axios from "axios";
@@ -57,21 +63,24 @@ export default function FormReviews(props) {
             }}
           />
         </Grid>
+        <Grid item xs={0}>
+          <Button onClick={e => {
+            e.preventDefault();
+            setNotRecommendedValue();
+          }}>
+            Not Recommended
+          </Button>
+        </Grid>
         <Grid item xs={2}>
-          <Stack direction="row" spacing={1} alignItems="center">
-            <button onClick={e => {
-              e.preventDefault();
-              setNotRecommendedValue();
-            }}>
-              Not Recommended
-            </button>
-            <button onClick={e => {
+          <Button 
+            onClick={e => {
               e.preventDefault();
               setRecommendedValue();
-            }}>
-              Recommended
-            </button>
-          </Stack>  
+            }}
+            
+          >
+            Recommended
+          </Button>
         </Grid>
         <Grid item xs={12}>
           <Input
