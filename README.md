@@ -8,7 +8,7 @@ Created by [Emily Villett](https://github.com/MeowPup) and [Curtis Wilson](https
 
 Pager is a simple, user-driven social media platform designed for readers to collect, review, and curate lists of their favourite books.
 
-![homepage](image)
+![homepage](https://github.com/curtis-wils0n/pager/blob/main/public/docs/homepage.png?raw=true)
 
 By paring down the plethora of features offered by current book-review platforms, Pager offers a cleaner, more approachable solution that focuses on expanding your collections.
 
@@ -18,19 +18,19 @@ Pager utilizes React, Material UI, and Express to interact with its PostgreSQL d
 
 ## Screenshots
 
-![dashboard](image)
+![dashboard](https://github.com/curtis-wils0n/pager/blob/main/public/docs/dashboard.png?raw=true)
 
 Your dashboard updates with all the latest reviews and popular books.
 
-![my shelf](image)
+![my shelf](https://github.com/curtis-wils0n/pager/blob/main/public/docs/shelf.png?raw=true)
 
 Your shelf is your core collection of books you've read, or want to read.
 
-![reviews](image)
+![reviews](https://github.com/curtis-wils0n/pager/blob/main/public/docs/reviews.png?raw=true)
 
 Keep track of how you enjoyed each book, and recommend it to your friends (or tell them to steer clear)!
 
-![lists](image)
+![lists](https://github.com/curtis-wils0n/pager/blob/main/public/docs/lists.png?raw=true)
 
 Curate and share lists of books, joined together by a common theme unique to you.
 
