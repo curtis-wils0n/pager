@@ -30,8 +30,8 @@ import { Grid } from "@mui/material";
    </div>
    <h1 className="page-header-lists">Check out these lists!</h1>
    <div class="fake-list-title">
-   <p><strong>Chloe's top books of the year</strong></p>
-   <p><strong>Must reads!!</strong></p>
+   <a href="#" class="list-link"><strong>Chloe's top books of the year</strong></a>
+   <a href="#" class="list-link"><strong>Must reads!!</strong></a>
    </div>
    <div class="dash-list">
     <img class="list-image" src="https://i.imgur.com/QLsAXRx.png" alt=""/>
