@@ -14,6 +14,7 @@ import UserReviews from './routes/UserReviews';
 import Navbar from './components/Navbar';
 import Dashboard from './routes/Dashboard';
 import Footer from './components/Footer.jsx';
+import LastPage from './routes/LastPage.jsx';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/dashboard' element={ <Dashboard /> }></Route>
         <Route path='/login' element={ <Login /> }></Route>
         <Route path='/register' element={ <Register /> }></Route>
+        <Route path='/pleasehireus' element={ <LastPage /> }></Route>
         <Route path='/user' element={ <User /> }></Route>
         <Route path='/books/:id' element={ <Book /> }></Route>.
         <Route path='/user/shelf' element={ <UserShelf /> }></Route>

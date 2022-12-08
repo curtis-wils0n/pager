@@ -108,7 +108,7 @@ export default function Navbar() {
                 </MenuItem>
                 <Divider />
                 <MenuItem>
-                  <ExitToAppIcon /> <Link className="menulink" to='/'>Logout</Link>
+                  <ExitToAppIcon /> <Link className="menulink" to='/pleasehireus'>Logout</Link>
                 </MenuItem>
               </Menu>
             </React.Fragment>
