@@ -22,7 +22,6 @@ export default function UserLists() {
   return (
     <>
       <h1 className="page-header">My Lists</h1>
-
       <form>
         <Button variant='outlined' disableRipple onClick={displayForm}>Add List</Button>
       </form>

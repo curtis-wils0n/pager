@@ -2,6 +2,11 @@ import React from "react";
 import { Grid } from '@mui/material'
 import { useNavigate } from "react-router-dom";
 
+/**
+ * Component for rendering all books present on a user's shelf
+ * @param {*} props 
+ * @returns JSX Functional Component
+ */
 export default function UserShelfItem(props) {
 
   const navigate = useNavigate();

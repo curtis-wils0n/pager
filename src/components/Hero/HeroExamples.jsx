@@ -1,3 +1,10 @@
+import React from 'react';
+
+/**
+ * Display component for example of book covers on homepage
+ * @param {*} props 
+ * @returns JSX Functional Component
+ */
 export default function HeroExamples(props) {
 
   return (

@@ -3,6 +3,11 @@ import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
 import GradeIcon from '@mui/icons-material/Grade';
 import DriveFileRenameOutlineIcon from '@mui/icons-material/DriveFileRenameOutline';
 
+/**
+ * Display component for example features on homepage
+ * @param {*} props 
+ * @returns JSX Functional Component
+ */
 export default function HeroFeatures(props) {
   return(
     <>

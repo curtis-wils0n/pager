@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {
   Button,
   TextField,
@@ -15,9 +15,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import HomeNavbar from '../components/HomeNavbar';
 import '../styles/login-register.css';
 
-const theme = createTheme();
 
 export default function Register() {
+  const theme = createTheme();
+  
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);

@@ -2,8 +2,13 @@ import React from "react";
 import { Box, Input, Button, Grid } from "@mui/material";
 import axios from "axios";
 import useAPIData from "../../hooks/useAPIData";
-import '../../styles/BookContainer.css'
+import '../../styles/BookContainer.css';
 
+/**
+ * Form component to make PUT queries to lists DB
+ * @param {*} props 
+ * @returns JSX Functional Component
+ */
 export default function FormLists(props) {
 
   const { renderedUserShelf } = useAPIData();
@@ -20,16 +25,13 @@ export default function FormLists(props) {
           description,
           userID,
         } = data.target;
-        const listURL = '/api/lists';
         Promise.all([
-          axios.put(listURL, {
+          axios.put('/api/lists', {
             title: title.value,
             description: description.value,
             user_id: userID.value
           })
-        ]).then(() => {
-          console.log('complete');
-        });
+        ])
       }}
     >
       <Grid container spacing={1}>
@@ -70,5 +72,5 @@ export default function FormLists(props) {
         </Grid>
       </Grid>
     </Box>
-  ) 
+  );
 }

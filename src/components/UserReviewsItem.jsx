@@ -3,6 +3,12 @@ import StarRating from "../components/StarRating.jsx";
 import { useNavigate } from "react-router-dom";
 import '../styles/Review.css'
 
+/**
+ * Component to render the review of the logged-in user
+ * TODO: combine with UserAllReviewsItem for DRY code
+ * @param {*} props 
+ * @returns JSX Functional Component
+ */
 export default function UserReviewsItem(props) {
 
   const navigate = useNavigate();
