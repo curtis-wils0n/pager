@@ -114,7 +114,7 @@ export default function Navbar() {
             <Divider />
             <MenuItem>
               <ExitToAppIcon />
-              <Link className="menulink" to='/'>Logout</Link>
+              <Link className="menulink" to='/pleasehireus'>Logout</Link>
             </MenuItem>
           </Menu>
         </div>

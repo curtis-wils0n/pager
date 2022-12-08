@@ -153,3 +153,12 @@ footer {
   border: solid 3px black;
   height: 60px;
 }
+
+.mylist-description {
+  text-decoration: underline;
+}
+
+.list-separator {
+  border-top-style: solid;
+  margin-top:10px;
+}

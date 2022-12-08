@@ -29,12 +29,13 @@ export default function UserLists() {
         <FormLists />
       )}
       <h1>Abby's favourite books of 2022</h1>
-      <p>These are some books that I really liked reading in 2022</p>
+      <p class="mylist-description"><strong>These are some books that I really liked reading in 2022</strong></p>
       <Grid container spacing={2}>
         {list1}
       </Grid>
+      <div className="list-separator"></div>
       <h1>Abby's revised favourite books list of 2022</h1>
-      <p>Here are a new bunch of books that I actually like better than the last list I made!</p>
+      <p class="mylist-description"><strong>Here are a new bunch of books that I actually like better than the last list I made!</strong></p>
       <Grid container spacing={2}>
         {list2}
       </Grid>
