@@ -10,17 +10,14 @@ import { useNavigate } from "react-router-dom";
 import useAPIData from '../../hooks/useAPIData';
 import axios from "axios";
 
+/**
+ * Form component to make PUT queries to review DB
+ * @param {*} props 
+ * @returns JSX Functional Component
+ */
 export default function FormReviews(props) {
 
   const [recommended, setRecommended] = useState(false);
-
-  const setRecommendedValue = () => {
-    setRecommended(true);
-  }
-
-  const setNotRecommendedValue = () => {
-    setRecommended(false);
-  }
 
   const navigate = useNavigate();
 
@@ -66,7 +63,7 @@ export default function FormReviews(props) {
         <Grid item xs={0}>
           <Button onClick={e => {
             e.preventDefault();
-            setNotRecommendedValue();
+            setRecommended(false);
           }}>
             Not Recommended
           </Button>
@@ -75,7 +72,7 @@ export default function FormReviews(props) {
           <Button 
             onClick={e => {
               e.preventDefault();
-              setRecommendedValue();
+              setRecommended(true);
             }}
             
           >
@@ -102,5 +99,5 @@ export default function FormReviews(props) {
         </Grid>
       </Grid>
     </Box>
-  ) 
+  );
 }

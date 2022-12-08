@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormTemplate from "../components/Form/FormTemplate";
+import FormBooks from '../components/Form/FormBooks';
 import useAPIData from '../hooks/useAPIData';
 import { Grid, Button } from '@mui/material'
 import '../styles/UserShelf.css';
@@ -43,7 +43,7 @@ export default function UserShelf() {
       </div>
       <div className="add-book-form">
         {showForm && (
-          <FormTemplate type="books" />
+          <FormBooks />
         )}
       </div>
       <div className="book-grid">

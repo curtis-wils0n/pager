@@ -1,5 +1,10 @@
+import React from 'react';
 import BorderColorOutlinedIcon from '@mui/icons-material/BorderColorOutlined';
 
+/**
+ * Component for displaying user avatar and relevant information
+ * @returns JSX Functional Component
+ */
 export default function UserAvatar() {
 
   return (

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {
   Button,
   CssBaseline,
@@ -11,15 +11,14 @@ import {
   Grid,
   Typography
 } from '@mui/material';
-
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 import HomeNavbar from '../components/HomeNavbar';
 import '../styles/login-register.css';
 
-const theme = createTheme();
 
 export default function Login() {
+  const theme = createTheme();
 
   const navigate = useNavigate();
   

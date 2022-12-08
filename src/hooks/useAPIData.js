@@ -6,25 +6,30 @@ import UserAllReviewsItem from "../components/UserAllReviewsItem";
 import axios from 'axios';
 
 export default function useAPIData(initial) {
-
+  // Declare state defaults for APIs
   const [genre, setGenre] = useState('');
   const [stars, setStars] = useState(1);
   const [books, setBooks] = useState([]);
   const [reviews, setReviews] = useState([]);
+  const [allreviews, setAllReviews] = useState([]);
   const [lists, setLists] = useState([]);
-
+  // Fetch data from server API and set values
   useEffect(() => {
     Promise.all([
       axios.get('/api/books'),
       axios.get('/api/lists'),
-      axios.get('/api/reviews')
+      axios.get('/api/reviews'),
+      axios.get('/api/allreviews')
     ]).then((all) => {
       setBooks(all[0].data);
       setLists(all[1].data);
       setReviews(all[2].data);
+      setAllReviews(all[3].data);
     });
   }, []);
-
+  // Simple sort methods for books
+  // TODO: combine for DRY code, ran into difficulties passing variables through
+  //  custom hooks.
   function sortName() {
     const sortedData = [...books].sort((a, b) => {
       return a.author_name > b.author_name ? 1 : -1;
@@ -84,7 +89,7 @@ export default function useAPIData(initial) {
   const handleChange = (event) => {
     setGenre(event.target.value);
   }
- 
+  // Render components for return
   const renderedUserShelf = books.map(book =>
     <UserShelfItem
       key={book.id}
@@ -113,21 +118,8 @@ export default function useAPIData(initial) {
       cover_art_url={review.cover_art_url}
       genre={review.genre}
     />
-  )
-
-  // render ALL reviews
-
-  const [allreviews, setAllReviews] = useState([]);
-
-  useEffect(() => {
-    const allreviewURL = '/api/allreviews';
-    Promise.all([
-      axios.get(allreviewURL)
-    ]).then((all) => {
-      setAllReviews(all[0].data);
-    });
-  }, []);
-
+  );
+    
   const renderedAllReviews = allreviews.map(review => 
     <UserAllReviewsItem 
       key={review.id}
@@ -147,17 +139,6 @@ export default function useAPIData(initial) {
     />
   )
 
-  // Render user list titles and description 
-  
-  useEffect(() => {
-    const listURL = '/api/lists';
-    Promise.all([
-      axios.get(listURL)
-    ]).then((all) => {
-      setLists(all[0].data);
-    });
-  }, []);
-
   const renderedLists = lists.map(list => 
     <UserListsItem 
       key={list.id}
@@ -166,7 +147,7 @@ export default function useAPIData(initial) {
       cover_art_url={list.cover_art_url}
     />
   );
-  
+      
   return {
     sortName,
     sortTitle,

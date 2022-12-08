@@ -10,12 +10,17 @@ import {
 import axios from "axios";
 import useAPIData from '../../hooks/useAPIData';
 
+/**
+ * Form component to make PUT queries to books DB
+ * @param {*} props 
+ * @returns JSX Functional Component
+ */
 export default function FormContent(props) {
 
   const {
     genre,
-    handleChange,
     genres,
+    handleChange,
   } = useAPIData();
 
   return (
@@ -102,7 +107,7 @@ export default function FormContent(props) {
           >
             {genres.map((option) => (
               <MenuItem value={option}>
-              {option}
+                {option}
               </MenuItem>
             ))}
           </TextField>
@@ -133,5 +138,5 @@ export default function FormContent(props) {
         </Grid>
       </Grid>
     </Box>
-  )
+  );
 }

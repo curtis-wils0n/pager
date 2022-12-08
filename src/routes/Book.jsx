@@ -5,13 +5,18 @@ import axios from "axios";
 
 import '../styles/Book.css'
 
+/**
+ * Route for individual book view
+ * @param {*} props 
+ * @returns JSX Functional Component
+ */
 export default function Book (props) {
 
-  let {id} = useParams();
+  let { id } = useParams();
   const [book, setBook] = useState(<Book />);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0);  // Reset window position
     Promise.all([
       axios.get(`/api/books/${id}`)
     ]).then((all) => {

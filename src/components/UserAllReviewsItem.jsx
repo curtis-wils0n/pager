@@ -1,8 +1,12 @@
-import React from "react";
 import StarRating from "../components/StarRating";
 import { useNavigate } from "react-router-dom";
 import '../styles/Review.css'
 
+/**
+ * All-purpose component for displaying reviews based on prop data
+ * @param {*} props 
+ * @returns JSX Functional Component
+ */
 export default function UserAllReviewsItem(props) {
 
   const navigate = useNavigate();
